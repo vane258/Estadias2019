@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Aspirantes;
+use App\kardex;
+use App\Historial;
 
 class HomeController extends Controller
 {
@@ -21,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $countAspirantes = Aspirantes::count();
+        $countkardex = kardex::count();
+        $countHistorial = Historial::count();
+       
+        return view('dashboard',compact(['countAspirantes','countkardex', 'countHistorial']));
+       
     }
 }

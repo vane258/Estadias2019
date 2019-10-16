@@ -129,7 +129,7 @@
                 <a href="/home" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>
-                  kardex
+                  Kardex
                   <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
@@ -174,9 +174,9 @@
 
 
              <!-- Alumnos Reinscritos -->
-             <li class="nav-item has-treeview">
+             <li class="nav-item">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
                 Alumnos Reinscritos
                 <i class="right fas fa-angle-left"></i>
@@ -192,15 +192,19 @@
                             <i class="far fa-circle nav-icon"></i>
                             <p>visualizar Lista</p>
                             </a>
+                            <a href="{{url('/Rei')}}" class="nav-link">
+                            <i class="nav-icon fas fa-chart-pie"></i>
+                            <p>Grafica ultimo promedio</p>
+                            </a>
                     </li>
                 </ul>
              </li>
              <!-- //PROVEEDORES -->
 
  <!-- Aspirantes -->
-       <li class="nav-item has-treeview">
+       <li class="nav-item">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
                Aspirantes
                 <i class="right fas fa-angle-left"></i>
@@ -217,11 +221,11 @@
                             <p>visualizar Lista</p>
                             </a>
                             <a href="{{url('/AspirantesGrafica')}}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="nav-icon fas fa-chart-pie"></i>
                             <p>Grafica alumno y promedio</p>
                             </a>
                             <a href="{{url('/AspirantesGraficaGenero')}}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="nav-icon fas fa-chart-pie"></i>
                             <p>Grafica alumno y ptos. ceneval</p>
                             </a>
                     </li>
@@ -230,9 +234,9 @@
              <!-- //Aspirantes -->
 
 <!-- Certificado -->
-<li class="nav-item has-treeview">
+<li class="nav-item">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Certificado
                 <i class="right fas fa-angle-left"></i>
@@ -255,7 +259,7 @@
 <!-- Formato Registro -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Formato Registro
                 <i class="right fas fa-angle-left"></i>
@@ -275,10 +279,10 @@
                 </ul>
              </li>
              <!-- //Formato Registro -->
-<!-- Lista de Asistencia -->
-<li class="nav-item has-treeview">
+             <!-- Lista de Asistencia -->
+             <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Lista Asistencia
                 <i class="right fas fa-angle-left"></i>
@@ -301,7 +305,7 @@
 <!-- ALumnos Baja-->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Alumnos Baja
                 <i class="right fas fa-angle-left"></i>
@@ -325,7 +329,7 @@
              <!-- Certificado -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Constancia de estudios
                 <i class="right fas fa-angle-left"></i>
@@ -349,7 +353,7 @@
              <!-- becas asignadas -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Becas Asignadas
                 <i class="right fas fa-angle-left"></i>
@@ -372,7 +376,7 @@
             <!-- Horario Profesores -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Horario Profesores
                 <i class="right fas fa-angle-left"></i>
@@ -396,7 +400,7 @@
             <!-- horario aulas -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Horario Aulas
                 <i class="right fas fa-angle-left"></i>
@@ -419,7 +423,7 @@
             <!-- Reporte Base -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
             Reporte Base
                 <i class="right fas fa-angle-left"></i>
@@ -442,7 +446,7 @@
             <!-- prof-materias -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
            Prof-Materias
                 <i class="right fas fa-angle-left"></i>
@@ -465,7 +469,7 @@
 <!-- reprobadas -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Materias Reprobadas
                 <i class="right fas fa-angle-left"></i>
@@ -488,7 +492,7 @@
 <!-- Candidatos  recu -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
               Candidatos Recu
                 <i class="right fas fa-angle-left"></i>
@@ -511,14 +515,14 @@
 <!-- Asignaturas Ofertar -->
 <li class="nav-item has-treeview">
              <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="far fa-circle nav-icon"></i>
               <p>
             Asignaturas Ofertar
                 <i class="right fas fa-angle-left"></i>
               </p>
              </a>
              <ul class="nav nav-treeview">
-                    <li class="nav-item">
+                    <li class="far fa-circle nav-icon">
                          <a href="/AsignaturasOfertar/create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Registrar alumno</p>

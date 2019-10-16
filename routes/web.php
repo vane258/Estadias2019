@@ -34,6 +34,8 @@ Route::get('Ha','HorarioAulasPDFController@generar');
 Route::get('Hm','HorarioMaestrosPDFController@generar');
 Route::get('Mr','MateriasReprobadasPDFController@generar');
 Route::get('R','ReinscripcionesPDFController@generar');
+Route::get('Rei','ReinscripcionesGraficaController@index');
+
 Route::get('co','constanciasReportController@generar');
 
 

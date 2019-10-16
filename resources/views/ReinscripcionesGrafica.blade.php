@@ -3,6 +3,7 @@
 @section('content')
 <html>
   <head>
+  <div class="content-wrapper">
   <a href="{{url('Reinscripciones')}}" class="btn btn-success">Inicio</a>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -17,7 +18,7 @@
         ]);
 
         var options = {
-          title: 'Ultimo Promedio de Alumno De Alumno',
+          title: 'Ultimo Promedio  Obtenido del Alumno',
           is3D: true,
         };
 
