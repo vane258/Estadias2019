@@ -89,6 +89,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 </div>
 </div>
 </div>
+<example-component> </example-component>
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success" style="background:#800080">Inicio</a>

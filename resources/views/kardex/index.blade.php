@@ -5,7 +5,7 @@ de las vistas  -->
 <!-- es un contenedor tipo wrapper para que tenga movilidad al momento de que se mueva el dashboard
  y no quede arriba del contenido si no que se acomple-->
 
-<div class="content-wrapper">
+ <div class="content-wrapper">
 <div class="container">
  <!-- este es un if mediante el cual se envia el mensaje 
 siempre y cuando se haya eliminado, creado o modificado un registro-->         
@@ -103,4 +103,5 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 </div>
 </div>
 </div>
+<example-component></example-component>
 @endsection

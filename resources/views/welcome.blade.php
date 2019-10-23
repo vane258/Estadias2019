@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #070707;
+                background-color: #ffffff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -64,7 +64,7 @@
         </style>
     </head>
     <body class="hold-transition login-page" style="background-image:url('/images/login.jpeg');">
-
+        <div id="app">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -78,13 +78,10 @@
                         @endif
                     @endauth
                 </div>
+                </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md" style="color:#800080">
-                
-                    Universidad Politecnica de Victoria
-                </div>
+            
 
                
                  

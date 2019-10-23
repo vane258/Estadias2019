@@ -7,10 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
  <!-- Styles -->
 
-    <link href="{{ asset('/css/adminlte.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/all.css') }}" rel="stylesheet">
   
-    <link href="{{ asset('/css/adminlte.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+   
 
     <link rel="stylesheet" href="{{ asset('/css/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Ionicons -->
@@ -149,6 +148,21 @@
              <!-- //TIENDAS-->
 
              <!-- PRODUCTOS -->
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
               <li class="nav-item">
                 <a href="/home" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
