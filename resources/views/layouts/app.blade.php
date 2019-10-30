@@ -1,4 +1,6 @@
-
+<!-- este archivo html app.blade.php es el archivo que se incluye cada una de las vistas y es de la cual
+todas cargar los estilos  -->
+<!-- comienza el archivo html-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
  <!-- Styles -->
 
-    <link href="{{ asset('public/css/all.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dist/css/adminlte.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dist/css/adminlte.min.css') }}" rel="stylesheet">
   
    
 

@@ -58,6 +58,7 @@ margin: auto;
 <h3 class="center">Departamento de Servicios Escolares</h3>
 <p style="text-align:center">FICHA DE REGISTRO- NUEVO INGRESO</p>
 </div>
+<br>
 <!-- es el formato del reporte divido en forms para que 
 quede con buen estilo-->
 <form style="border:1px solid #070707">

@@ -26,7 +26,7 @@ esten todos completos y manda un msj al momento de que nota que hay un campo fal
 @endif
  <!--es la variable modo la cual se declara especificamente en esta vista para ayudar a indentificar que 
  vista y que accion se esta ejecutando  -->
-<form action="{{url('/home')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
+<form action="{{url('/Aspirantes')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
 {{csrf_field()}}
 @include('Aspirantes.form',['Modo'=>'creacionaspirantes'])
 

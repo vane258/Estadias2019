@@ -2,7 +2,6 @@
 <!--  se extiende el diseno del login o del admin a cada una
 de las vistas  -->
 
-
 @extends('layouts.app')
 @section('content')
 <!-- es un contenedor tipo wrapper para que tenga movilidad al momento de que se mueva el dashboard

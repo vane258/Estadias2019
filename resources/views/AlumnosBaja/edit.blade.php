@@ -11,7 +11,7 @@ de las vistas  -->
 <body class="hold-transition login-page" >
 <div class="login-box" style="width: 700px; height: 500px;">
   <div class="login-logo" >
-  <a href="welcome"><b>Formulario para Editar alumnos</b></a>
+  <a href="welcome" style="color:#070707"><b>Formulario para Editar alumnos</b></a>
   </div>
     <div class="card-body login-card-body" style="background-color:#800080">
    <!--es la variable modo la cual se declara especificamente en esta vista para ayudar a indentificar que 
@@ -22,12 +22,10 @@ de las vistas  -->
 {{method_field('PATCH')}}
 @include('AlumnosBaja.form',['Modo'=>'edicionalumnos'])
 </form>
-
 </div>
 </div>
 </div>
 </div>
-
-
+</div>
 
 @endsection

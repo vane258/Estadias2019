@@ -1,3 +1,4 @@
+
 <!--  se extiende el diseno del login o del admin a cada una
 de las vistas  -->
 
@@ -29,9 +30,12 @@ esten todos completos y manda un msj al momento de que nota que hay un campo fal
  vista y que accion se esta ejecutando  -->
 <form action="{{url('/AlumnosBaja')}}" class="form-horizontal" method="post" enctype="multipart/form-data">
 {{csrf_field()}}
-@include('AlumnosBaja.form',['Modo'=>'creacionaalumnos'])
+@include('AlumnosBaja.form',['Modo'=>'creacionalumnos'])
 
 </form> 
 </div>
-<div>
+</div>
+</div>
+</div>
+</div>
 @endsection

@@ -1,7 +1,7 @@
 <!--  en este form el cual comparten el edit y create se ponen cada uno de los campos
  que se van a insertar en la bd que son necesarios es el reporte ademas de que al momento
  de querer editar son los mismos campos que se utilizan para esta opcion  -->
- <div class="content-wrapper">
+ 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre_alumno'}}</label>
@@ -28,6 +28,6 @@
 <input  class="form-control"  type="text" name="Anotaciones" id="Anotaciones" value="{{isset ($baja->Anotaciones)?$baja->Anotaciones:''}}" >
 </div>
 <a class="btn btn-primary" href="{{url('home')}}">Regresar</a>
-<input type="submit" class="btn btn-success " value ="{{$Modo=='creacionalumno'?'Agregar Asignatura':'Modificar Asignatura'}}">
+<input type="submit" class="btn btn-success " value ="{{$Modo=='creacionalumnos'?'Agregar Asignatura':'Modificar Asignatura'}}">
 </div>
 </div>

@@ -27,6 +27,4 @@ de las vistas  -->
 </div>
 </div>
 
-
-
 @endsection

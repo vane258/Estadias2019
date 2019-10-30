@@ -37,5 +37,5 @@ esten todos completos y manda un msj al momento de que nota que hay un campo fal
 </div>
 </div>
 </div>
-/<div>
+<div>
 @endsection

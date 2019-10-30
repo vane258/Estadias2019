@@ -42,7 +42,7 @@ p.center{
 }
 .cuadrado {
   border:1px solid #070707;
-  width:20%;
+  width:15%;
   height:1;
   padding-top:10%;
   position:left;
@@ -66,7 +66,7 @@ margin: auto;
 <div id="header">
 <table width="35%" height="auto">
 <tr  style="border:white">
-<td  style="border:white"><img src="./images/logoG.png" width="60" height="40" ></td>
+<td  style="border:white;text-align:right" ><img src="./images/logoG.png" width="60" height="40" ></td>
 <td  style="border:white"><img src="./images/logoS.png" width="50" height="30"></td>
 </tr >
 </table>
@@ -118,7 +118,7 @@ los registros de laa bd en-->
  
    <!-- este es el pie de pagina de cada hoja que llegue a formularse del reporte-->
 
-   <div type="footer">
+   <div id="footer">
    <table width="35%" height="auto">
 <tr  style="border:white">
 <td  style="border:white"><img src="./images/logo.png" width="60" height="40" ></td>
