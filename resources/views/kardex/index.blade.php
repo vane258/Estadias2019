@@ -46,6 +46,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
             <div class="table-responsive">
               <table class="table">
                 <thead class=" text-primary">
+   <th>Matricula Alumno</th>
    <th>Nombre Alumno</th>
    <th>Carrera</th>
    <th>Plan de Estudios</th>
@@ -67,6 +68,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($kar as $a)
         <tr>
+   <td>{{$a->Matricula_alumno}}</td>
    <td>{{$a->Nombre_alumno}}</td>
    <td>{{$a->carrera}}</td>
    <td>{{$a->plan_estudios}}</td>
@@ -84,6 +86,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
          eliminar del controlador-->
     <td><a class="btn btn-warning" href="{{ url('/kardex/'.$a->id. '/edit')}}">
         Editar</a> |
+        <a href="{{route('reports.kardex', ['id' => $a->Matricula_alumno])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/kardex/'.$a->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -98,7 +102,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('ka')}}" class="btn btn-success"  style="background:#800080">Informe</a>
+
 </div>
 </div>
 </div>

@@ -4,6 +4,10 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula_alumno">{{'Matricula'}}</label>
+<input  class="form-control"  type="text" name="Matricula_alumno" id="Matricula_alumno" value="{{isset ($kar->Matricula_alumno)?$kar->Matricula_alumno:''}}" >
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre Alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($kar->Nombre_alumno)?$kar->Nombre_alumno:''}}">
 </div>

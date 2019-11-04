@@ -4,6 +4,10 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($cons->Matricula)?$cons->Matricula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($cons->Nombre_alumno)?$cons->Nombre_alumno:''}}">
 </div>
@@ -64,6 +68,30 @@
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="creditos_materia">{{'Creditos Materia'}}</label>
 <input  class="form-control"  type="text" name="creditos_materia" id="creditos_materia" value="{{isset ($his->creditos_materia)?$his->creditos_materia:''}}" >
+</div>
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Cuat_Actual">{{'Cuatrimestre Actual'}}</label>
+<input  class="form-control"  type="text" name="Cuat_Actual" id="Cuat_Actual" value="{{isset ($his->Cuat_Actual)?$his->Cuat_Actual:''}}" >
+</div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Mat_cur">{{'Materias Cursadas'}}</label>
+<input  class="form-control"  type="text" name="Mat_cur" id="Mat_cur" value="{{isset ($his->Mat_cur)?$his->Mat_cur:''}}" >
+</div>
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Mat_apr">{{'Materias Aprobadas'}}</label>
+<input  class="form-control"  type="text" name="Mat_apr" id="Mat_apr" value="{{isset ($his->Mat_apr)?$his->Mat_apr:''}}" >
+</div>
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Mat_rep">{{'Materias Reprobadas'}}</label>
+<input  class="form-control"  type="text" name="Mat_rep" id="Mat_rep" value="{{isset ($his->Mat_rep)?$his->Mat_rep:''}}" >
+</div>
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Prom_cuatri">{{'Promedio Final Cuatri'}}</label>
+<input  class="form-control"  type="text" name="Prom_cuatri" id="Prom_cuatri" value="{{isset ($his->Prom_cuatri)?$his->Prom_cuatri:''}}" >
 </div>
 
 <a class="btn btn-primary" href="{{url('home')}}">Regresar</a>

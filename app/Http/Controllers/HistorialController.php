@@ -49,6 +49,7 @@ class HistorialController extends Controller
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
        $campos=[
+         'Matricula' =>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
          'carrera'=>'required|string|max:100',
          'plan_estudios'=>'required|string|max:100',
@@ -61,9 +62,14 @@ class HistorialController extends Controller
          'calificacion'=>'required|string|max:100',
          'resultado'=>'required|string|max:100',
          'curso'=>'required|string|max:100',
-         'creditos_materia'=>'required|string|max:100'
-         
-       ];
+         'creditos_materia'=>'required|string|max:100',
+         'Cuat_Actual'=>'required|string|max:100',
+         'Mat_cur'=>'required|string|max:100',
+         'Mat_apr'=>'required|string|max:100',
+         'Mat_rep'=>'required|string|max:100',
+         'Prom_cuatri'=>'required|string|max:100'
+
+        ];
        // es una variable que nos ayuda a imprimir un mensaje para saber cual fue el campo que se olvido introducir
        $Mensaje=["required"=> 'El :attribute es requerido'];
        $this->validate($request,$campos,$Mensaje);
@@ -96,7 +102,7 @@ class HistorialController extends Controller
     public function edit($id)
     { // es para que encuentre el registro con el id  y lo muestre al oprimir la opcion editar
         $his=Historial::findorfail($id);
-        return view('Historialedit',compact('his'));
+        return view('Historial.edit',compact('his'));
     }
 
     /**

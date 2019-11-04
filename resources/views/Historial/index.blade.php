@@ -62,6 +62,11 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
             <th>Curso</th>
             <th>Creditos Materia</th>
             <th>Modalidad</th>
+            <th>Cuatrimestre Actual</th>
+            <th>Materias Cursadas</th>
+            <th>Materias Aprobadas</th>
+            <th>Materias Reprobadas</th>
+            <th>Promedio final del cuatri</th>
             <th>Acciones</th>
             
         </tr>
@@ -71,7 +76,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($his as $b1)
         <tr>
-        <td>{{$b1->id}}</td>
+        <td>{{$b1->Matricula}}</td>
         <td>{{$b1->Nombre_alumno}}</td>
         <td>{{$b1->carrera}}</td>
         <td>{{$b1->plan_estudios}}</td>
@@ -85,10 +90,17 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
         <td>{{$b1->resultado}}</td>
         <td>{{$b1->curso}}</td>
         <td>{{$b1->creditos_materia}}</td>
+        <td>{{$b1->Cuat_Actual}}</td>
+        <td>{{$b1->Mat_cur}}</td>
+        <td>{{$b1->Mat_apr}}</td>
+        <td>{{$b1->Mat_rep}}</td>
+        <td>{{$b1->Prom_cuatri}}</td>
         <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
       <td><a class="btn btn-warning" href="{{ url('/Historial/'.$b1->id. '/edit')}}">
-        Editar</a>   |
+        Editar</a>  |
+        <a href="{{route('reports.Historial', ['id' => $b1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/Historial/'.$b1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -104,6 +116,5 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('Hi')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 
 @endsection

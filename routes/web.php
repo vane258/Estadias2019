@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('Hi','HistorialAcademicoReportController@generar');
+Route::get('Hi/{id}','HistorialAcademicoReportController@generar')->where('id', '[0-9]+')->name("reports.Historial");
 Route::get('Ce','CertificadoReportController@generar');
 Route::get('Fo','FormatoRegistroReportController@generar');
 Route::get('Lo','ListaAsistenciaReportController@generar');
@@ -26,7 +26,7 @@ Route::get('pdf','ReportController@generar');
 Route::get('Ab','AlumnosBajaPDFController@generar');
 Route::get('cr','CandidatosRecursamientoPDFController@generar');
 Route::get('mo','MateriasOfertarPDFController@generar');
-Route::get('ka','kardexReportController@generar');
+Route::get('ka/{id}','kardexReportController@generar')->where('id', '[0-9]+')->name("reports.kardex");
 Route::get('pdf1','ReportMaestrosController@generar');
 Route::get('Ba','BecasAsignadasPDFController@generar');
 Route::get('Rb','ReporteBasePDFController@generar');

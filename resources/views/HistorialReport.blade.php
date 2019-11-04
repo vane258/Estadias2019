@@ -51,26 +51,16 @@ titulo del reporte -->
 </div>
 <!--  son parrafos que van conformando el formato del reporte-->
 
+<div style="text-align:left" >Alumno: {{$alumno->Nombre_alumno}}</div>
+<div style="text-align:right">Matricula: {{$alumno->Matricula}}</div>
+<div style="text-align:left">Carrera: {{$alumno->carrera}}</div>
+<div style="text-align:right">Plan Estudios: {{$alumno->plan_estudios}}</div>
+<div style="text-align:left">Modalidad: {{$alumno->modalidad}}</div>
+
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Alumno:</label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno">Matricula:</label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno">Carrera:</label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno">Plan de estudios:</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
- <label for="nombre_alumno" id="nombre_alumno">Modalidad:</label>
- <input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno">Promedio General:</label> 
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-<label for="nombre_alumno" id="nombre_alumno">Creditos</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<div style="text-align:right">Promedio General: {{$alumno->Prom_general}}</div>
+<div style="text-align:left">Creditos: {{$alumno->creditos}}</div>
+
 </p>
 <br>
 <br>
@@ -89,7 +79,7 @@ los registros de laa bd en el reporte-->
    </tr>
   <!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
 
-   @foreach($historial AS $a)
+   @foreach($materias AS $a)
    <tr>
    <td>{{$a->cuatrimestre}}</td>
    <td>{{$a->Clave_Materia}}</td>
@@ -114,19 +104,25 @@ los registros de laa bd en el reporte-->
    <th>Materias Cursadas</th>
    <th>Materias Aprobadas</th>
    <th>Materias Reprobadas</th>
-   <th>Promedio</th>
+   <th>Promedio Total</th>
    </tr>
      <!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
 
-   @foreach($historial AS $c)
-   <tr>
- 
-
-    </tr>
+   @foreach($materias AS $a)
+   <td>{{$a->Cuat_Actual}}</td>
+   <td>{{$a->Mat_cur}}</td>
+   <td>{{$a->Mat_apr}}</td>
+   <td>{{$a->Mat_rep}}</td>
+   <td>{{$a->Prom_cuatri}}</td>
+   
+  
+   </tr>
+  
     @endforeach
    </table >
    <!--  es la parte de las firmas en formato del reporte-->
-
+<br>
+<br>
    <p style="text-align:center">
    <label for="nombre_alumno" id="nombre_alumno">ING. ISMAEL ALBERTO PACHECO ZABALETA</label>
    <br>

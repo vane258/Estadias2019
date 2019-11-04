@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class kardexReportController extends Controller
@@ -15,13 +15,11 @@ class kardexReportController extends Controller
 // seleccionandolos de la tabla que se le indique     
      
     
-    public function generar(){
-    $alumno=\DB::table('kardexes')
-        ->select(['id','Nombre_alumno','carrera','plan_estudios','promedio_gral','creditos','porcentaje_avance','id_Materia','Nombre_Materia','Cal','Resultado','curso','creditos_materia','periodo'])
-        // obtiene los datos mediante el metodo get
-        ->get();
-        // hace la vista  y la carga en formato pdf
-       $view= \View::make('kardexReport',compact('alumno'))->render();
+    public function generar(Request $request){
+        $materias=DB::table("kardexes")->where("Matricula_alumno","=",$request->id)->get();
+        $alumno= DB::table("kardexes")->where("Matricula_alumno","=",$request->id)->orderBy('id','asc')->first();
+        
+       $view= \View::make('kardexReport',compact('alumno',"materias"))->render();
        $ka=\App::make('dompdf.wrapper');
        $ka->loadHTML($view);
        //retorna la vista 

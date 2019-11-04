@@ -60,14 +60,14 @@ margin: auto;
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h2 class="center">Kardex </h2>
 </div>
-<div style="text-align:left" >Alumno:</div>
-<div style="text-align:right">Promedio General:</div>
-<div style="text-align:left">Matricula:</div>
-<div style="text-align:right">Creditos:</div>
-<div style="text-align:left">Carrera:</div>
-<div style="text-align:right">Porcentaje de Avance:</div>
-<div style="text-align:left">Plan Estudios:</div>
-<div style="text-align:right">Fecha de Impresion:</div>
+<div style="text-align:left" >Alumno: {{$alumno->Nombre_alumno}}</div>
+<div style="text-align:right">Promedio General: {{$alumno->promedio_gral}}</div>
+<div style="text-align:left">Matricula: {{$alumno->Matricula_alumno}}</div>
+<div style="text-align:right">Creditos: {{$alumno->creditos}}</div>
+<div style="text-align:left">Carrera: {{$alumno->carrera}}</div>
+<div style="text-align:right">Porcentaje de Avance: {{$alumno->porcentaje_avance}} %</div>
+<div style="text-align:left">Plan Estudios: {{$alumno->plan_estudios}}</div>
+<div style="text-align:right">Fecha de Impresion: @php echo date("d-m-Y"); @endphp</div>
 
 <!-- inicio de la tabla donde se mostraran cada uno de 
 los registros de laa bd en-->
@@ -84,7 +84,7 @@ los registros de laa bd en-->
    </tr>
    <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($alumno AS $a)
+   @foreach($materias AS $a)
    <tr>
    <td>{{$a->id_Materia}}</td>
    <td>{{$a->Nombre_Materia}}</td>
