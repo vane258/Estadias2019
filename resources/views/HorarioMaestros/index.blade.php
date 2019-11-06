@@ -20,7 +20,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <div class="col-md-12">
         <div class="card card-plain">
           <div class="card-header card-header-primary" style="background-color:#800080">
-            <h4 class="card-title mt-0"> Tabla de Maestros y horario</h4>
+            <h4 class="card-title mt-0" style="color:white"> Tabla de Maestros y horario</h4>
            <!--  este es el input que ayudara a hacer el filtrado y la busqueda en esta vista por nombre
           del alumno-->
             <div class="card-tools">
@@ -46,6 +46,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
                 <thead class=" text-primary">
             <th>ID Maestro</th>
             <th>Nombre Maestro</th>
+            <th>Nombre Aula</th>
             <th>Dia</th>
             <th>Hora</th>
             <th>Acciones</th>
@@ -56,14 +57,17 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($maestro as $a1)
         <tr>
-        <td>{{$a1->id}}</td>
+        <td>{{$a1->clave_maestro}}</td>
         <td>{{$a1->Nombre_Maestro}}</td>
+        <td>{{$a1->Nombre_aula}}</td>
         <td>{{$a1->dia}}</td>
         <td>{{$a1->hora}}</td>
          <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/HorarioMaestros/'.$a1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.HorarioMaestros', ['id' => $a1->clave_maestro])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/HorarioMaestros/'.$a1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -79,5 +83,4 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('Ce')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 @endsection

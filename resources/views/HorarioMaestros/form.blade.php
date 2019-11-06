@@ -5,9 +5,17 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="clave_maestro">{{'Clave Maestro'}}</label>
+<input  class="form-control" type="text" name="clave_maestro" id="clave_maestro" value="{{isset ($maestro->clave_maestro)?$maestro->clave_maestro:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_Maestro">{{'Nombre Maestro'}}</label>
 <input  class="form-control" type="text" name="Nombre_Maestro" id="Nombre_Maestro" value="{{isset ($maestro->Nombre_Maestro)?$maestro->Nombre_Maestro:''}}">
-
+</div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Nombre_aula">{{'Nombre Aula'}}</label>
+<input  class="form-control" type="text" name="Nombre_aula" id="Nombre_aula" value="{{isset ($maestro->Nombre_aula)?$maestro->Nombre_aula:''}}">
+</div>
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="dia">{{'Dia'}}</label>
 <input  class="form-control"  type="text" name="dia" id="dia" value="{{isset ($maestro->dia)?$maestro->dia:''}}" >
@@ -19,4 +27,4 @@
 </div>
 
 <a class="btn btn-primary" href="{{url('home')}}">Regresar</a>
-<input type="submit" class="btn btn-success " value ="{{$Modo=='creacionmaestros'?'Agregar Maestro':'Modificar Maestro'}}">
+<input type="submit" class="btn btn-success " value ="{{$Modo=='creacionmaestros'?'Agregar Maestro':'Modificar Aula'}}">

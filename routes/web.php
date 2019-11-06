@@ -31,7 +31,7 @@ Route::get('pdf1','ReportMaestrosController@generar');
 Route::get('Ba/{id}','BecasAsignadasPDFController@generar')->where('id', '[0-9]+')->name("reports.BecasAsignadas");
 Route::get('Rb','ReporteBasePDFController@generar');
 Route::get('Ha','HorarioAulasPDFController@generar');
-Route::get('Hm','HorarioMaestrosPDFController@generar');
+Route::get('Hm/{id}','HorarioMaestrosPDFController@generar')->where('id', '[0-9]+')->name("reports.HorarioMaestros");
 Route::get('Mr','MateriasReprobadasPDFController@generar');
 Route::get('R/{id}','ReinscripcionesPDFController@generar')->where('id', '[0-9]+')->name("reports.Reinscripciones");
 Route::get('Rei','ReinscripcionesGraficaController@index');

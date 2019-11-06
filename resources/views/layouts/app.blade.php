@@ -539,7 +539,7 @@ todas cargar los estilos  -->
               </p>
              </a>
              <ul class="nav nav-treeview">
-                    <li class="far fa-circle nav-icon">
+             <li class="nav-item">
                          <a href="/AsignaturasOfertar/create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Registrar alumno</p>
@@ -552,8 +552,7 @@ todas cargar los estilos  -->
                 </ul>
              </li>
              <!-- //PROVEEDORES -->
-            </ul>
-            </ul>
+            
             <!--ACABA SUBMENU -->
           </li>         
         </ul><!-- ACABA MENU-->

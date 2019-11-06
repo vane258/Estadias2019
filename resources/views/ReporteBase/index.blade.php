@@ -21,7 +21,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <div class="col-md-12">
         <div class="card card-plain">
           <div class="card-header card-header-primary" style="background-color:#800080">
-            <h4 class="card-title mt-0"> Tabla de alumnos Reporte Base</h4>
+            <h4 class="card-title mt-0" style="color:white"> Tabla de alumnos Reporte Base</h4>
            <!--  este es el input que ayudara a hacer el filtrado y la busqueda en esta vista por nombre
           del alumno-->
             <div class="card-tools">

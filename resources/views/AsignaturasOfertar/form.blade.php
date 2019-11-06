@@ -2,7 +2,7 @@
  que se van a insertar en la bd que son necesarios es el reporte ademas de que al momento
  de querer editar son los mismos campos que se utilizan para esta opcion  -->
 
-<div class="content-wrapper">
+
 
 <div class="container">
 <div class="form-group">

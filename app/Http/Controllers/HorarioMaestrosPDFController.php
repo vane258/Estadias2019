@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -15,17 +16,14 @@ class HorarioMaestrosPDFController extends Controller
 // seleccionandolos de la tabla que se le indique     
     
     
-    public function generar(){
-    $maestro=\DB::table('horario_maestros')
-        ->select(['id','Nombre_Maestro','dia','hora'])
-    // obtiene los datos mediante el metodo get
-
-        ->get();
-    // hace la vista  y la carga en formato pdf
-       $view= \View::make('HorarioMaestrosReport',compact('maestro'))->render();
+    public function generar(Request $request){
+        $materias=DB::table("horario_maestros")->where("clave_maestro","=",$request->id)->get();
+        $alumno= DB::table("horario_maestros")->where("clave_maestro","=",$request->id)->orderBy('id','asc')->first();
+        
+       $view= \View::make('HorarioMaestrosReport',compact('alumno',"materias"))->render();
        $Hm=\App::make('dompdf.wrapper');
        $Hm->loadHTML($view);
-       //retorna la vista
+       //retorna la vista 
        return $Hm->stream('HorarioMaestrosReport','.pdf');
     
     }

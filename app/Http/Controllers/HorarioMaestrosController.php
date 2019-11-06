@@ -51,6 +51,7 @@ class HorarioMaestrosController extends Controller
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
        $campos=[
+        'clave_maestro'=>'required|string|max:100',
         'Nombre_Maestro'=>'required|string|max:100',
          'dia' =>'required|string|max:100',
          'hora' =>'required|string|max:100',

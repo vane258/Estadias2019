@@ -42,6 +42,12 @@ margin: auto;
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Horario Maestros</h3>
 </div>
+<br>
+<br>
+<div> <b>Maestro:</b> {{$alumno->Nombre_Maestro}}
+<div><b> Fecha de Impresion:</b>  @php echo date("d-m-Y"); @endphp
+</div>
+</div>
 <!--  son espacios entre la cabecera y la tabla-->
 
 <br>
@@ -50,17 +56,17 @@ margin: auto;
 los registros de la bd en-->
 <table  cellspacing="0" cellpadding="8">
   <tr>
-   <th>Id Maestro</th>
+   <th>Clave Maestro</th>
    <th>Nombre Aula</th>
    <th>Dia</th>
    <th>Hora</th>
    </tr>
    <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($maestro AS $m)
+   @foreach($materias AS $m)
    <tr>
-   <td>{{$m->id}}</td>
-   <td>{{$m->Nombre_Maestro}}</td>
+   <td>{{$m->clave_maestro}}</td>
+   <td>{{$m->Nombre_aula}}</td>
    <td>{{$m->dia}}</td>
    <td>{{$m->hora}}</td>
 
