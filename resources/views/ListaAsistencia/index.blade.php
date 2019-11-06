@@ -47,11 +47,14 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
               <table class="table table-hover">
                 <thead class=" text-primary">
             
-             <th>ID</th>
+            <th>Clave Maestro</th>
             <th>Nombre Profesor</th>
+            <th>Clave Materia</th>
             <th>Materia</th>
+            <th>curso</th>
             <th>Periodo</th>
             <th>Grupo</th>
+            <th>Matricula</th>
             <th>Nombre del Alumno</th>
             <th>Acciones</th>
         </tr>
@@ -61,16 +64,21 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($lista as $a1)
         <tr>
-        <td>{{$a1->id}}</td>
+        <td>{{$a1->clave}}</td>
         <td>{{$a1->Nombre_Maestro}}</td>
+        <td>{{$a1->clave_materia}}</td>
         <td>{{$a1->Nombre_Materia}}</td>
+        <td>{{$a1->curso}}</td>
         <td>{{$a1->Periodo}}</td>
         <td>{{$a1->Grupo}}</td>
+        <td>{{$a1->matricula}}</td>
         <td>{{$a1->Nombre_alumno}}</td>
 <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/ListaAsistencia/'.$a1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.ListaAsistencia', ['id' => $a1->clave_materia])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/ListaAsistencia/'.$a1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -87,7 +95,6 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('Lo')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 
 
 @endsection

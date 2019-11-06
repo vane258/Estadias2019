@@ -45,12 +45,13 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
             <div class="table-responsive">
               <table class="table table-hover">
                 <thead class=" text-primary">
-             <th>Id</th>
+             <th>Matricula</th>
              <th>Carrera</th>
             <th>Plan de Estudios</th>
             <th>Nombre Alumno </th>
             <th>Campus</th>
             <th>Ultimo Promedio Obtenido</th>
+            <th>Periodo</th>
             <th>Acciones</th>
             
         </tr>
@@ -60,16 +61,20 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($reis as $materias1)
         <tr>
-        <td>{{$materias1->id}}</td>
+        <td>{{$materias1->matricula}}</td>
         <td>{{$materias1->carrera}}</td>
         <td>{{$materias1->plan_estudios}}</td>
         <td>{{$materias1->Nombre_alumno}}</td>
         <td>{{$materias1->campus}}</td>
         <td>{{$materias1->up}}</td>
+        <td>{{$materias1->per}}</td>
+
         <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/Reinscripciones/'.$materias1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.Reinscripciones', ['id' => $materias1->matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/Reinscripciones/'.$materias1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -84,7 +89,6 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 </div>
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('R')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 
 
 @endsection

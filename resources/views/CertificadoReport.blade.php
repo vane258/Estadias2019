@@ -27,45 +27,43 @@ h3.center{
 }
 .oval {
    width: 90px;
-    height: 160px;
-     background:white;
+    height: 140px;
+     background:black;
      border-radius: 45px;
      border:#070707;
      
             }
 
 
-table {
+
+            table {
 margin: auto;
 }
+@page { margin: 200px 60px; }
+    #header { position: fixed; left: 0px; top: -180px; right: 0px; height: 150px; background-color:white; text-align: RIGHT; }
+    #footer { position: fixed; left: 0px; bottom: -180px; right: 0px; height: 150px; background-color:white; text-align: RIGHT;}
+    #footer .page:after { content: counter(page, upper-roman); }
 </style>
 </head>
 <body>
 
 <!--son los div que van en la cabecera del reporte en formato pdf -->
+<div id="header">
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
+</div>
+<p> <div class="oval"></div>  <P> Certifica que la(el)C. <b>{{$alumno->Nombre_alumno}}</b>
+acredito el <b>{{$alumno->porcentaje}}%</b> de las asignaturas
+que integran el plan de estudios de la carrera de:<b>{{$alumno->carrera}}</b>
+ consta del archivo escolar,en el periodo del mes de, <b>{{$alumno->periodo}}</b>
+ al mes de <b>{{$alumno->mes}} </b>obteniendo los resultados que a continuacion se indican.</p></p>
 
-<p style="text-align:center">
-<label for="nombre_alumno" id="nombre_alumno">CERTIFICADO N.- :</label>
-<br>
-
-<label for="nombre_alumno" id="nombre_alumno"> FECHA:</label>
-<br>
-<div class="oval" style="border:1px solid #070707"></div>
-<P> Certifica que la(el)C. <<input class="form-control" type="text" name="">
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-acredito el <input  type="text" name="Nombre_alumno" id="Nombre_alumno">% de las asignaturas
-que integran el plan de estudios de la carrera de:<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-consta del archivo escolar,en el periodo del mes de <input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-al mes de <input  type="text" name="Nombre_alumno" id="Nombre_alumno"> obteniendo los resultados que a continuacion se indican.
-</p>
 
 
 <!--inicia la tabla de donde se cargan los datos de la bd -->
 
 <table cellspacing="0" cellpadding="8" >
 <tr>
-   <th>Id Aula</th>
+   
    <th>Nombre Materia</th>
    <th>Nivel de dominio con letra</th>
    <th>Calificacion</th>
@@ -75,13 +73,12 @@ al mes de <input  type="text" name="Nombre_alumno" id="Nombre_alumno"> obteniend
    <!--ciclo que recorre toda la tabla  y muestra cada uno de los registros
    de la bd en la tabla del reporte -->
 
-   @foreach($baja AS $c)
+   @foreach($materias AS $c)
    <tr>
-   <td>{{$c->id}}</td>
+  
    <td>{{$c->Nombre_Materia}}</td>
    <td>{{$c->Nd}}</td>
    <td>{{$c->cal}}</td>
-
    <td>{{$c->creditos}}</td>
    <td>{{$c->cuatrimestre}}</td>
 

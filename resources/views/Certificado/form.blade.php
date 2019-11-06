@@ -5,6 +5,10 @@
 
 <div class="container" >
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($cer->Matricula)?$cer->Matricula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($cer->Nombre_alumno)?$cer->Nombre_alumno:''}}">
 
@@ -52,9 +56,13 @@
 
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="mes">{{'Mes'}}</label>
-<input  class="form-control"  type="mes" name="mes" id="mes" value="{{isset ($cer->mes)?$cer->mes:''}}" >
+<input  class="form-control"  type="text" name="mes" id="mes" value="{{isset ($cer->mes)?$cer->mes:''}}" >
 </div>
 
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="porcentaje">{{'Porcentaje Avance'}}</label>
+<input  class="form-control"  type="text" name="porcentaje" id="porcentaje" value="{{isset ($cer->porcentaje)?$cer->porcentaje:''}}" >
+</div>
 
 <a class="btn btn-primary" href="{{url('home')}}">Regresar</a>
 <input type="submit" class="btn btn-success " value ="{{$Modo=='creacioncer'?'Agregar Alumno':'Modificar Alumno'}}">

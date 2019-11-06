@@ -5,6 +5,10 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($beca->Matricula)?$beca->Matricula:''}}">
+
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre_alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($beca->Nombre_alumno)?$beca->Nombre_alumno:''}}">
 

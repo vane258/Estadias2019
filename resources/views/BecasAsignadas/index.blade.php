@@ -68,7 +68,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($beca as $b1)
         <tr>
-        <td>{{$b1->id}}</td>
+        <td>{{$b1->Matricula}}</td>
         <td>{{$b1->Nombre_alumno}}</td>
         <td>{{$b1->plan_estudios}}</td>
         <td>{{$b1->carrera}}</td>
@@ -81,6 +81,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/BecasAsignadas/'.$b1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.BecasAsignadas', ['id' => $b1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/BecasAsignadas/'.$b1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}

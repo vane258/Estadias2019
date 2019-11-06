@@ -40,7 +40,7 @@ margin: auto;
 <div id="header">
 <img src="./images/logo.png" width="150" height="100" >
 <h2 class="center"  >Reinscripcion de alumnos</h2>
-<div style="text-align:center">Periodo</div>
+<div style="text-align:center" >Periodo: {{$alumno->per}}</div>
 </div>
 <br>
 <br>
@@ -48,7 +48,7 @@ margin: auto;
 los registros de laa bd en-->
 <table  cellspacing="0" cellpadding="8">
   <tr>
-   <th>Id</th>
+   <th>Matricula</th>
    <th>Carrera</th>
    <th>Plan de Estudios</th>
    <th> Alumno</th>
@@ -57,9 +57,9 @@ los registros de laa bd en-->
    </tr>
     <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($reis AS $p)
+   @foreach($materias AS $p)
    <tr>
-   <td>{{$p->id}}</td>
+   <td>{{$p->matricula}}</td>
    <td>{{$p->carrera}}</td>
    <td>{{$p->plan_estudios}}</td>
    <td>{{$p->Nombre_alumno}}</td>

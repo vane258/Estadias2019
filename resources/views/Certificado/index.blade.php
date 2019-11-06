@@ -57,6 +57,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
             <th>Carrera</th>
             <th>Periodo</th>
             <th>Mes</th>
+            <th>Porcentaje Avance</th>
             <th>Acciones</th>
             
             
@@ -67,7 +68,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($cer as $r1)
         <tr>
-        <td>{{$r1->id}}</td>
+        <td>{{$r1->Matricula}}</td>
         <td>{{$r1->Nombre_alumno}}</td>
         <td>{{$r1->Clave_Materia}}</td>
         <td>{{$r1->Nombre_Materia}}</td>
@@ -78,10 +79,13 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
        <td>{{$r1->carrera}}</td>
        <td>{{$r1->periodo}}</td>
        <td>{{$r1->mes}}</td>
+       <td>{{$r1->porcentaje}}</td>
        <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/Certificado/'.$r1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.Certificado', ['id' => $r1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/Certificado/'.$r1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -97,6 +101,5 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success" style="background:#800080">Inicio</a>
-<a href="{{url('Ce')}}" class="btn btn-success"  style="background:#800080" >Informe</a>
 
 @endsection

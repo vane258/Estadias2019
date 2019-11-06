@@ -51,6 +51,7 @@ class AlumnosBajaController extends Controller
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
        $campos=[
+         'Matricula' =>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
          'Estatus'=>'required|string|max:100',
          'Motivo'=>'required|string|max:100',

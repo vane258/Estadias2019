@@ -48,11 +48,14 @@ class ReinscripcionesController extends Controller
     // una condicion de require para que se obligatorio introducir valores en todos los campos del
     // formulario
        $campos=[
+         'matricula'=>'required|string|max:100',
          'carrera'=>'required|string|max:100',
          'plan_estudios'=>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
          'campus' =>'required|string|max:100',
-         'up' =>'required|string|max:100'
+         'up' =>'required|string|max:100',
+         'per' =>'required|string|max:100'
+
         
         
         

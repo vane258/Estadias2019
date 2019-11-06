@@ -49,10 +49,14 @@ class ListaAsistenciaController extends Controller
     // una condicion de require para que se obligatorio introducir valores en todos los campos del
     // formulario
        $campos=[
+        'clave'=>'required|string|max:100',
         'Nombre_Maestro'=>'required|string|max:100',
+        'clave_materia'=>'required|string|max:100',
          'Nombre_Materia' =>'required|string|max:100',
+         'curso'=>'required|string|max:100',
          'Periodo' =>'required|string|max:100',
          'Grupo' =>'required|string|max:100',
+         'matricula'=>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
        ];
       // es una variable que nos ayuda a imprimir un mensaje para saber cual fue el campo que se olvido introducir
@@ -98,7 +102,7 @@ class ListaAsistenciaController extends Controller
     {// es para que actualice a cada uno de los campos segun el registro o fila seleccionado 
     // el parametro para decidir es el id.
         $lista=request()->except(['_token','_method']);
-        ListaAsistencia::where('id','=',$id)->update($maestro);
+        ListaAsistencia::where('id','=',$id)->update($lista);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
         return redirect('ListaAsistencia')->with('Mensaje','Maestro(a) modificado(a) con exito');
@@ -114,7 +118,7 @@ class ListaAsistenciaController extends Controller
     {// funcion que elimina completamente toda la informacion referente a un id o fila 
      // segun le hayamos dado la instruccion.
         $lista=ListaAsistencia::findorfail($id);
-        HorarioMaestros::destroy($id);
+        ListaAsistencia::destroy($id);
         return redirect('ListaAsistencia')->with('Mensaje','Maestro Eliminado con Exito');
         //
     }

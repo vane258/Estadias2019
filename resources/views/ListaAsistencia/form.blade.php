@@ -5,12 +5,25 @@
   
 <div id= "app" class="container" >
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="clave">{{'Clave Maestro'}}</label>
+<input  class="form-control" type="text" name="clave" id="clave" value="{{isset ($lista->clave)?$lista->clave:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_Maestro">{{'Nombre Maestro'}}</label>
 <input  class="form-control" type="text" name="Nombre_Maestro" id="Nombre_Maestro" value="{{isset ($lista->Nombre_Maestro)?$lista->Nombre_Maestro:''}}">
+</div>
+<div id= "app" class="container" >
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="clave_materia">{{'Clave Materia'}}</label>
+<input  class="form-control" type="text" name="clave_materia" id="clave_materia" value="{{isset ($lista->clave_materia)?$lista->clave_materia:''}}">
 </div>
 <div  id= "app" class="form-group" style="color:#ffffff">
 <label  id= "app" class="control-label" for="Nombre_Materia">{{'Nombre Materia'}}</label>
 <input  class="form-control"  type="text" name="Nombre_Materia" id="Nombre_Materia" value="{{isset ($lista->Nombre_Materia)?$lista->Nombre_Materia:''}}" >
+</div>
+<div id= "app"  class="form-group" style="color:#ffffff">
+<label class="control-label" for="curso">{{'Curso'}}</label>
+<input  class="form-control"  type="text" name="curso" id="curso" value="{{isset ($lista->curso)?$lista->curso:''}}" >
 </div>
 <div  id= "app" class="form-group" style="color:#ffffff">
 <label class="control-label" for="Periodo">{{'Periodo'}}</label>
@@ -19,6 +32,10 @@
 <div  id= "app" class="form-group" style="color:#ffffff">
 <label class="control-label" for="Grupo">{{'Grupo'}}</label>
 <input  class="form-control"  type="text" name="Grupo" id="Grupo" value="{{isset ($lista->Grupo)?$lista->Grupo:''}}" >
+</div>
+<div id= "app"  class="form-group" style="color:#ffffff">
+<label class="control-label" for="matricula">{{'Matricula'}}</label>
+<input  class="form-control"  type="text" name="matricula" id="matricula" value="{{isset ($lista->matricula)?$lista->matricula:''}}" >
 </div>
 <div id= "app"  class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre Alumno'}}</label>

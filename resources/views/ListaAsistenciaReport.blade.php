@@ -48,14 +48,19 @@ margin: auto;
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Lista de Asistencias</h3>
 </div>
-
+<br>
+<br>
+<div style="text-align:left" >Nombre Maestro: {{$alumno->Nombre_Maestro}}</div>
+<div style="text-align:right">Periodo: {{$alumno->Periodo}}</div>
+<div style="text-align:left">Grupo: {{$alumno->Grupo}}</div>
+<div style="text-align:right">Nombre Materia: {{$alumno->Nombre_Materia}}</div>
 <br>
 <br>
 <!-- inicio de la tabla donde se mostraran cada uno de 
 los registros de laa bd en-->
 <table  cellspacing="0" cellpadding="8">
   <tr>
-   <th># de lista</th>
+   <th>Clave Materia</th>
    <th>Matricula</th>
    <th>Nombre Alumno</th>
    <th>Curso</th>
@@ -85,10 +90,10 @@ los registros de laa bd en-->
    </tr>
     <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($lista AS $p)
+   @foreach($materias AS $p)
    <tr>
-   <td>{{$loop->iteration}}</td>
-   <td>{{$p->id}}</td>
+   <td>{{$p->clave_materia}}</td> 
+     <td>{{$p->matricula}}</td>
    <td>{{$p->Nombre_alumno}}</td>
    <td>{{$p->curso}}</td>
    <td></td>

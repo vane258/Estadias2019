@@ -51,6 +51,7 @@ class CertificadoController extends Controller
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
        $campos=[
+         'Matricula' =>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
          'Clave_Materia'=>'required|string|max:100',
          'Nombre_Materia'=>'required|string|max:100',
@@ -111,8 +112,8 @@ class CertificadoController extends Controller
     {
         // es para que actualice a cada uno de los campos segun el registro o fila seleccionado 
         // el parametro para decidir es el id.
-        $cons=request()->except(['_token','_method']);
-        Certificado::where('id','=',$id)->update($cons);
+        $cer=request()->except(['_token','_method']);
+        Certificado::where('id','=',$id)->update($cer);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
         return redirect('Certificado')->with('Mensaje','Alumno modificado con exito');

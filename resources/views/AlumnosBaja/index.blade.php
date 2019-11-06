@@ -64,7 +64,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
     @foreach($baja as $b1)
         <tr>
         
-        <td>{{$b1->id}}</td>
+        <td>{{$b1->Matricula}}</td>
         <td>{{$b1->Nombre_alumno}}</td>
         <td>{{$b1->fecha}}</td>
         <td>{{$b1->Estatus}}</td>
@@ -74,6 +74,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 
       <td><a class="btn btn-warning" href="{{ url('/AlumnosBaja/'.$b1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.AlumnosBaja', ['id' => $b1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/AlumnosBaja/'.$b1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}

@@ -18,25 +18,25 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('Hi/{id}','HistorialAcademicoReportController@generar')->where('id', '[0-9]+')->name("reports.Historial");
-Route::get('Ce','CertificadoReportController@generar');
+Route::get('Ce/{id}','CertificadoReportController@generar')->where('id', '[0-9]+')->name("reports.Certificado");
 Route::get('Fo','FormatoRegistroReportController@generar');
-Route::get('Lo','ListaAsistenciaReportController@generar');
-Route::get('As','AspirantesReportController@generar');
+Route::get('Lo/{id}','ListaAsistenciaReportController@generar')->where('id', '[0-9]+')->name("reports.ListaAsistencia");
+Route::get('As/{id}','AspirantesReportController@generar')->where('id', '[0-9]+')->name("reports.Aspirantes");
 Route::get('pdf','ReportController@generar');
-Route::get('Ab','AlumnosBajaPDFController@generar');
+Route::get('Ab/{id}','AlumnosBajaPDFController@generar')->where('id', '[0-9]+')->name("reports.AlumnosBaja");
 Route::get('cr','CandidatosRecursamientoPDFController@generar');
 Route::get('mo','MateriasOfertarPDFController@generar');
 Route::get('ka/{id}','kardexReportController@generar')->where('id', '[0-9]+')->name("reports.kardex");
 Route::get('pdf1','ReportMaestrosController@generar');
-Route::get('Ba','BecasAsignadasPDFController@generar');
+Route::get('Ba/{id}','BecasAsignadasPDFController@generar')->where('id', '[0-9]+')->name("reports.BecasAsignadas");
 Route::get('Rb','ReporteBasePDFController@generar');
 Route::get('Ha','HorarioAulasPDFController@generar');
 Route::get('Hm','HorarioMaestrosPDFController@generar');
 Route::get('Mr','MateriasReprobadasPDFController@generar');
-Route::get('R','ReinscripcionesPDFController@generar');
+Route::get('R/{id}','ReinscripcionesPDFController@generar')->where('id', '[0-9]+')->name("reports.Reinscripciones");
 Route::get('Rei','ReinscripcionesGraficaController@index');
 
-Route::get('co','constanciasReportController@generar');
+Route::get('co/{id}','constanciasReportController@generar')->where('id', '[0-9]+')->name("reports.constancias");
 
 
 

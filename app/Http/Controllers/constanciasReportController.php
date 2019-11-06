@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -14,20 +15,20 @@ class constanciasReportController extends Controller
     
     // esta funcion es la que genera el pdf  con los datos trayendolos desde la bd los que le establezcamos 
     // seleccionandolos de la tabla que se le indique 
-    public function generar(){
-    $cons=\DB::table('constancias')
-        ->select(['id','Nombre_alumno','Materias','Cal','Fecha'])
-       // obtiene los datos mediante el metodo get
-        ->get();
-      // hace la vista  y la carga en formato pdf
-       $view= \View::make('constanciasReport',compact('cons'))->render();
-       $co=\App::make('dompdf.wrapper');
-       $co->loadHTML($view);
-              //le da tamano  a la hoja del reporte
+    public function generar(Request $request){
+          // selecciona los datos de la tabla establecida
 
-       $co->setPaper('legal');
-              //retorna la vista 
-       return $co->stream('constanciasReport','.pdf');
-    
+          $materias=DB::table("constancias")->where("Matricula","=",$request->id)->get();
+          $alumno= DB::table("constancias")->where("Matricula","=",$request->id)->orderBy('id','asc')->first();
+          
+          $view= \View::make('constanciasReport',compact('alumno',"materias"))->render();
+          $co=\App::make('dompdf.wrapper');
+          $co->loadHTML($view);
+          // define el tamanio y orientacion de la hoja 
+          $co->setPaper('legal');
+          //retorna la vista 
+          return $co->stream('constanciasReport','.pdf');
+            
+
     }
 }

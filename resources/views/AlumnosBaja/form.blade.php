@@ -4,7 +4,11 @@
  
 <div class="container">
 <div class="form-group" style="color:#ffffff">
-<label class="control-label" for="Nombre_alumno">{{'Nombre_alumno'}}</label>
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($baja->Matricula)?$baja->Matricula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Nombre_alumno">{{'Nombre alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($baja->Nombre_alumno)?$baja->Nombre_alumno:''}}">
 </div>
 

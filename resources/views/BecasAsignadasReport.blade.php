@@ -61,9 +61,9 @@ margin: auto;
    </tr>
   <!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
 
-   @foreach($beca AS $c)
+   @foreach($materias AS $c)
    <tr>
-   <td>{{$c->id}}</td>
+   <td>{{$c->Matricula}}</td>
    <td>{{$c->Nombre_alumno}}</td>
    <td>{{$c->plan_estudios}}</td>
    <td>{{$c->carrera}}</td>

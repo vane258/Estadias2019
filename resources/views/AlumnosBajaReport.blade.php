@@ -49,7 +49,7 @@ margin: auto;
 <!-- comienza la tabla donde se cargan los registros  desde la bd -->
 <table  cellspacing="0" cellpadding="8">
   <tr>
-   <th>Id</th>
+   <th>Matricula</th>
    <th>Nombre Alumno</th>
    <th>Fecha</th>
    <th>Estatus</th>
@@ -57,9 +57,9 @@ margin: auto;
    <th>Anotaciones</th>
    </tr>
   <!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
-   @foreach($baja AS $p)
+   @foreach($materias AS $p)
    <tr>
-   <td>{{$p->id}}</td>
+   <td>{{$p->Matricula}}</td>
    <td>{{$p->Nombre_alumno}}</td>
    <td>{{$p->fecha}}</td>
    <td>{{$p->Estatus}}</td>

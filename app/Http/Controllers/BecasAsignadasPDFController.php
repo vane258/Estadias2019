@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class BecasAsignadasPDFController extends Controller
@@ -15,22 +15,16 @@ class BecasAsignadasPDFController extends Controller
       // esta funcion es la que genera el pdf  con los datos trayendolos desde la bd los que le establezcamos 
     // seleccionandolos de la tabla que se le indique 
 
-    public function generar(){
+    public function generar(Request $request){
         // selecciona los datos de la tabla establecida
 
-    $beca=\DB::table('becas_asignadas')
-        ->select(['id','Nombre_alumno','plan_estudios','carrera','sede','genero','generacion','tipo_beca','periodo_beca'])
-                // obtiene los datos mediante el metodo get
-        ->get();
-                // le pasa los datps a la vista 
-       $view= \View::make('BecasAsignadasReport',compact('beca'))->render();
-              // hace la vista  y la carga en formato pdf
-
-       $Ba=\App::make('dompdf.wrapper');
-       $Ba->loadHTML($view);
-              // retorna la vista 
-
-       return $Ba->stream('BecasAsignadasReport','.pdf');
-    
+        $materias=DB::table("becas_asignadas")->where("Matricula","=",$request->id)->get();
+        $alumno= DB::table("becas_asignadas")->where("Matricula","=",$request->id)->orderBy('id','asc')->first();
+        
+        $view= \View::make('BecasAsignadasReport',compact('alumno',"materias"))->render();
+        $Ba=\App::make('dompdf.wrapper');
+        $Ba->loadHTML($view);
+        //retorna la vista 
+        return $Ba->stream('BecasAsignadasReport','.pdf');
     }
 }

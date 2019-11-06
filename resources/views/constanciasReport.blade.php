@@ -72,15 +72,17 @@ margin: auto;
 </table>
 <h5 class="right"> UPV/DSE/O/.</h5>
 <h5 class="right"> Asunto:Constancia de estudios</h5>
+<h5 class="right"> Fecha de Impresion: @php echo date("d-m-Y"); @endphp</h5>
+
 </div>
 <div>
 <h3 class="left"> A QUIEN CORRESPONDA</h3>
-<p> El suscrito, Jefe del departamento de Servicios Escolares de la Universidad Politecnica de Victoria, UPV con clave 28EPO0001D.</p> 
+<p> El suscrito, Jefe del departamento de Servicios Escolares de la Universidad Politecnica de Victoria, UPV con clave <b>28EPO0001D</b>.</p> 
 <div class="cuadrado"></div>
 </div>
 
-<p> Que el(la) C.,es alumno regular de esta institucion, cursa actualmente el  cuatrimestre del programa academico de , en el periodo comprendido del ciclo escolar ,cuyos documentos obran
-en el archivo general de esta institucion y en el expediente personal del(a) alumno (a) con numero de matricula: obteniendo las materias cursadas actualmente por el alumno</p> 
+<p> Que el(la) C.<b>{{$alumno->Nombre_alumno}}</b>,es alumno regular de esta institucion, cursa actualmente el  cuatrimestre del programa academico de <b>{{$alumno->carrera}}</b>, en el periodo comprendido del ciclo escolar <b>{{$alumno->ciclo}}</b> ,
+cuyos documentos obran, en el archivo general de esta institucion y en el expediente personal del(a) alumno (a) con numero de matricula:<b>{{$alumno->Matricula}}</b> obteniendo las materias cursadas actualmente por el alumno</p> 
 
 <h6 class="center"> Materias que cursa Actualmente</h6> 
 <!-- inicio de la tabla donde se mostraran cada uno de 
@@ -96,7 +98,7 @@ los registros de laa bd en-->
    </tr>
       <!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
 
-   @foreach($cons AS $c)
+   @foreach($materias AS $c)
    <tr>
    <td>{{$c->id}}</td>
    <td>{{$c->Materias}}</td>

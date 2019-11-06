@@ -76,7 +76,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($aspirante AS $base1)
         <tr>
-        <td>{{$base1->id}}</td>
+        <td>{{$base1->Matricula}}</td>
         <td>{{$base1->Nombre_alumno}}</td>
         <td>{{$base1->carrera}}</td>
         <td>{{$base1->f_nac}}</td>
@@ -100,6 +100,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/Aspirantes/'.$base1->id.'/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.Aspirantes', ['id' => $base1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/Aspirantes/'.$base1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -118,5 +120,4 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success" style="background:#800080">Inicio</a>
-<a href="{{url('As')}}" class="btn btn-success" style="background:#800080">Reporte</a>
 @endsection

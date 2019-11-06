@@ -54,10 +54,13 @@ class constanciasController extends Controller
          // se hace un array con todos los campos que se van a insertar en la bd y se le pone
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
+         'Matricula' =>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
          'Materias'=>'required|string|max:100',
          'Cal'=>'required|string|max:100',
-         'Fecha'=>'required|string|max:100'
+         'Fecha'=>'required|string|max:100',
+         'Carrera'=>'required|string|max:100'
+
          
         
        ];

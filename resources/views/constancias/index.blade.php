@@ -52,6 +52,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
             <th>Materias</th>
             <th>Calificaciones</th>
             <th>Fecha</th>
+            <th>Carrera</th>
+            <th>Ciclo Escolar</th>
             <th>Acciones</th>
             
         </tr>
@@ -61,15 +63,19 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($cons as $b1)
         <tr>
-        <td>{{$b1->id}}</td>
+        <td>{{$b1->Matricula}}</td>
         <td>{{$b1->Nombre_alumno}}</td>
         <td>{{$b1->Materias}}</td>
         <td>{{$b1->Cal}}</td>
         <td>{{$b1->Fecha}}</td>
+        <td>{{$b1->carrera}}</td>
+        <td>{{$b1->ciclo}}</td>
         <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
       <td><a class="btn btn-warning" href="{{ url('/constancias/'.$b1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.constancias', ['id' => $b1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/constancias/'.$b1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AlumnosBajaPDFController extends Controller
 {
@@ -15,26 +16,18 @@ class AlumnosBajaPDFController extends Controller
     // esta funcion es la que genera el pdf  con los datos trayendolos desde la bd los que le establezcamos 
     // seleccionandolos de la tabla que se le indique 
 
-    public function generar(){
+    public function generar(Request $request){
         // selecciona los datos de la tabla establecida
 
-    $baja=\DB::table('alumnos_bajas')
-        ->select(['id','Nombre_alumno','fecha','Estatus','Motivo','Anotaciones'])
-                // obtiene los datos mediante el metodo get
+// selecciona los datos de la tabla establecida
+$materias=DB::table("alumnos_bajas")->where("Matricula","=",$request->id)->get();
+$alumno= DB::table("alumnos_bajas")->where("Matricula","=",$request->id)->orderBy('id','asc')->first();
 
-        ->get();
-                // hace un nuevo controller
-                $As=new AlumnosBajaPDFController();
-                        // le pasa los datps a la vista 
-
-       $view= \View::make('AlumnosBajaReport',compact('baja'))->render();
-              // hace la vista  y la carga en formato pdf
-
-       $Ab=\App::make('dompdf.wrapper');
-       $Ab->loadHTML($view);
-              // retorna la vista 
-
-       return $Ab->stream('AlumnosBajaReport','.pdf');
-    
+$view= \View::make('AlumnosBajaReport',compact('alumno',"materias"))->render();
+$Ab=\App::make('dompdf.wrapper');
+$Ab->loadHTML($view);
+//retorna la vista 
+return $Ab->stream('AlumnosBajaReport','.pdf');
+  
     }
 }

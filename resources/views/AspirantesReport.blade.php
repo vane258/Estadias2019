@@ -65,10 +65,10 @@ margin: auto;
             </tr>
 <!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
 
-   @foreach($asp AS $base1)
+   @foreach($materias AS $base1)
    <tr>
    
-        <td>{{$base1->id}}</td>
+        <td>{{$base1->Matricula}}</td>
         <td>{{$base1->Nombre_alumno}}</td>
         <td>{{$base1->carrera}}</td>
         <td>{{$base1->f_nac}}</td>
