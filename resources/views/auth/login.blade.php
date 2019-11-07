@@ -20,7 +20,7 @@
 <div class="login-box">
   <div class="login-logo">
   
-    <a href="home" style="color:#800080"><b>Universidad Politecnica de Victoria</b></a>
+    <a href="home" style="color:#ffffff"><b>Universidad Politecnica de Victoria</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">

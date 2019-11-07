@@ -49,7 +49,9 @@ class MateriasReprobadasController extends Controller
     // una condicion de require para que se obligatorio introducir valores en todos los campos del
     // formulario
        $campos=[
+         'Matricula' =>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
+         'Clave_Materia' =>'required|string|max:100',
          'Nombre_Materia' =>'required|string|max:100',
          'plan_estudios'=>'required|string|max:100'
         

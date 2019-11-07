@@ -3,9 +3,18 @@
  de querer editar son los mismos campos que se utilizan para esta opcion  -->
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($materias->Matricula)?$materias->Matricula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre Alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($materias->Nombre_alumno)?$materias->Nombre_alumno:''}}">
 </div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Clave_Materia">{{'Clave Materia'}}</label>
+<input   class="form-control" type="text" name="Clave_Materia" id="Clave_Materia" value="{{isset ($materias->Clave_Materia)?$materias->Clave_Materia:''}}">
+</div>
+
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="nombre_Materia">{{'Nombre Materia'}}</label>
 <input   class="form-control" type="text" name="Nombre_Materia" id="Nombre_Materia" value="{{isset ($materias->Nombre_Materia)?$materias->Nombre_Materia:''}}">

@@ -74,10 +74,9 @@ los registros de laa bd en-->
            </tr>
             <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($base AS $base1)
+   @foreach($materias AS $base1)
 <tr>
-   <td>{{$loop->iteration}}</td>
-        
+        <td>{{$base1->Matricula}}</td>     
         <td>{{$base1->Nombre_alumno}}</td>
         <td>{{$base1->plan_estudios}}</td>
         <td>{{$base1->carrera}}</td>

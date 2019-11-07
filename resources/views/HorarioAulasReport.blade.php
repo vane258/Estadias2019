@@ -50,7 +50,7 @@ margin: auto;
 los registros de laa bd en-->
 <table cellspacing="0" cellpadding="8">
   <tr>
-   <th>Id Aula</th>
+   <th>Clave Aula</th>
    <th>Nombre Aula</th>
    <th>Dia</th>
    <th>Hora</th>
@@ -58,9 +58,9 @@ los registros de laa bd en-->
   <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
 
-   @foreach($aula AS $c)
+   @foreach($materias AS $c)
    <tr>
-   <td>{{$c->id}}</td>
+   <td>{{$c->clave_aula}}</td>
    <td>{{$c->Nombre_aula}}</td>
    <td>{{$c->dia}}</td>
    <td>{{$c->hora}}</td>

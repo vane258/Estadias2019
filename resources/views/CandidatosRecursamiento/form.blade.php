@@ -4,9 +4,13 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($recursamiento->Matricula)?$recursamiento->Matricula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre_alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($recursamiento->Nombre_alumno)?$recursamiento->Nombre_alumno:''}}">
-
+</div>
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="plan_estudios">{{'plan_estudios'}}</label>
 <input  class="form-control"  type="text" name="plan_estudios" id="plan_estudios" value="{{isset ($recursamiento->plan_estudios)?$recursamiento->plan_estudios:''}}" >

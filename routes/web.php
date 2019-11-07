@@ -24,15 +24,15 @@ Route::get('Lo/{id}','ListaAsistenciaReportController@generar')->where('id', '[0
 Route::get('As/{id}','AspirantesReportController@generar')->where('id', '[0-9]+')->name("reports.Aspirantes");
 Route::get('pdf','ReportController@generar');
 Route::get('Ab/{id}','AlumnosBajaPDFController@generar')->where('id', '[0-9]+')->name("reports.AlumnosBaja");
-Route::get('cr','CandidatosRecursamientoPDFController@generar');
+Route::get('cr/{id}','CandidatosRecursamientoPDFController@generar')->where('id', '[0-9]+')->name("reports.CandidatosRecursamiento");
 Route::get('mo','MateriasOfertarPDFController@generar');
 Route::get('ka/{id}','kardexReportController@generar')->where('id', '[0-9]+')->name("reports.kardex");
-Route::get('pdf1','ReportMaestrosController@generar');
+Route::get('pdf1/{id}','ReportMaestrosController@generar')->where('id', '[0-9]+')->name("reports.ReportMaestros");
 Route::get('Ba/{id}','BecasAsignadasPDFController@generar')->where('id', '[0-9]+')->name("reports.BecasAsignadas");
-Route::get('Rb','ReporteBasePDFController@generar');
-Route::get('Ha','HorarioAulasPDFController@generar');
+Route::get('Rb/{id}','ReporteBasePDFController@generar')->where('id', '[0-9]+')->name("reports.ReporteBase");
+Route::get('Ha/{id}','HorarioAulasPDFController@generar')->where('id', '[0-9]+')->name("reports.HorarioAulas");
 Route::get('Hm/{id}','HorarioMaestrosPDFController@generar')->where('id', '[0-9]+')->name("reports.HorarioMaestros");
-Route::get('Mr','MateriasReprobadasPDFController@generar');
+Route::get('Mr/{id}','MateriasReprobadasPDFController@generar')->where('id', '[0-9]+')->name("reports.MateriasReprobadas");
 Route::get('R/{id}','ReinscripcionesPDFController@generar')->where('id', '[0-9]+')->name("reports.Reinscripciones");
 Route::get('Rei','ReinscripcionesGraficaController@index');
 

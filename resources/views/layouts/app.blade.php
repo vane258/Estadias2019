@@ -151,21 +151,6 @@ todas cargar los estilos  -->
              <!-- //TIENDAS-->
 
              <!-- PRODUCTOS -->
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
               <li class="nav-item">
                 <a href="/home" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
@@ -427,7 +412,7 @@ todas cargar los estilos  -->
                     <li class="nav-item">
                          <a href="/HorarioAulas/create" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Registrar alumno</p>
+                            <p>Registrar Aula</p>
                             </a>
                             <a href="{{url('/HorarioAulas')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -15,21 +16,15 @@ class ReportMaestrosController extends Controller
     //le hayamos indicado en $view la palabra make refiere a que se haga la vista con los datos que estamos seleccionando
     // con el select o mas bien que deposite esos datos dentro de la tabla en la vista que nosostros indiquemos
     
-    public function generar(){
-    $maestros=\DB::table('maestros_materias')
-        ->select(['id','Nombre_maestro','plan_estudios','Nombre_Materia','capacidad','Total_alumnos','Recursamiento'])
-        // obtiene los datos mediante el metodo get
-        ->get();
-        // carga la vista y pasa los parametros a la misma
-       $view= \View::make('ReportMaestro',compact('maestros'))->render();
+    public function generar(Request $request){
+        $materias=DB::table("maestros_materias")->where("clave_maestro","=",$request->id)->get();
+        $alumno= DB::table("maestros_materias")->where("clave_maestro","=",$request->id)->orderBy('id','asc')->first();
+        
+       $view= \View::make('ReportMaestro',compact('alumno',"materias"))->render();
        $pdf1=\App::make('dompdf.wrapper');
        $pdf1->loadHTML($view);
-       // retorna la vista
-       return $pdf1->stream('informeMaestros','.pdf');
-    
+       //retorna la vista 
+       return $pdf1->stream('ReportMaestro','.pdf');
+          
     }
     }
-?>
-
-
-

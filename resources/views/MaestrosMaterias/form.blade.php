@@ -2,15 +2,19 @@
  que se van a insertar en la bd que son necesarios es el reporte ademas de que al momento
  de querer editar son los mismos campos que se utilizan para esta opcion  -->
  <div class="container">
-                    <div class="form-group" style="color:#ffffff" >
-                    <label class="control-label" for="Nombre_maestro">{{'Nombre Maestro'}}</label>
-                    <input  class="form-control" type="text" name="Nombre_maestro" id="Nombre_maestro" value="{{isset ($maestros->Nombre_maestro)?$maestros->Nombre_maestro:''}}">
+ <div class="form-group" style="color:#ffffff">
+  <label class="control-label" for="clave_maestro">{{'Clave Maestro'}}</label>
+<input   class="form-control" type="text" name="clave_maestro" id="clave_maestro" value="{{isset ($maestros->clave_maestro)?$maestros->clave_maestro:''}}">
+</div>
+ <div class="form-group" style="color:#ffffff" >
+ <label class="control-label" for="Nombre_maestro">{{'Nombre Maestro'}}</label>
+  <input  class="form-control" type="text" name="Nombre_maestro" id="Nombre_maestro" value="{{isset ($maestros->Nombre_maestro)?$maestros->Nombre_maestro:''}}">
+  </div>
+ <div class="form-group" style="color:#ffffff">
+  <label class="control-label" for="nombre_Materia">{{'Nombre Materia'}}</label>
+<input   class="form-control" type="text" name="Nombre_Materia" id="Nombre_Materia" value="{{isset ($maestros->Nombre_Materia)?$maestros->Nombre_Materia:''}}">
+</div>
 
-                    <div class="form-group" style="color:#ffffff">
-                    <label class="control-label" for="nombre_Materia">{{'Nombre Materia'}}</label>
-                    <input   class="form-control" type="text" name="Nombre_Materia" id="Nombre_Materia" value="{{isset ($maestros->Nombre_Materia)?$maestros->Nombre_Materia:''}}">
-                    </div>
-                    </div>
                     <div class="form-group" style="color:#ffffff">
                     <label class="control-label" for="plan_estudios">{{'plan estudios'}}</label>
                     <input  class="form-control"  type="text" name="plan_estudios" id="plan_estudios" value="{{isset ($maestros->plan_estudios)?$maestros->plan_estudios:''}}" >

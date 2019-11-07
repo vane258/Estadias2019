@@ -3,6 +3,10 @@
  de querer editar son los mismos campos que se utilizan para esta opcion  -->
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($base->Matricula)?$base->Matricula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre_alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($base->Nombre_alumno)?$base->Nombre_alumno:''}}">
 </div>

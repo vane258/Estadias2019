@@ -59,7 +59,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($aula as $a1)
         <tr>
-        <td>{{$a1->id}}</td>
+        <td>{{$a1->clave_aula}}</td>
         <td>{{$a1->Nombre_aula}}</td>
         <td>{{$a1->dia}}</td>
         <td>{{$a1->hora}}</td>
@@ -67,6 +67,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/HorarioAulas/'.$a1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.HorarioAulas', ['id' => $a1->clave_aula])}}" class="btn btn-primary">Informe</a>
         <form method="post" action="{{url('/HorarioAulas/'.$a1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -83,5 +84,4 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('Ha')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 @endsection

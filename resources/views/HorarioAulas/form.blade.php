@@ -5,9 +5,13 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
+<label class="control-label" for="clave_aula">{{'Clave Aula'}}</label>
+<input  class="form-control" type="text" name="clave_aula" id="clave_aula" value="{{isset ($aula->clave_aula)?$aula->clave_aula:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_aula">{{'Nombre Aula'}}</label>
 <input  class="form-control" type="text" name="Nombre_aula" id="Nombre_aula" value="{{isset ($aula->Nombre_aula)?$aula->Nombre_aula:''}}">
-
+</div>
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="dia">{{'Dia'}}</label>
 <input  class="form-control"  type="text" name="dia" id="dia" value="{{isset ($aula->dia)?$aula->dia:''}}" >

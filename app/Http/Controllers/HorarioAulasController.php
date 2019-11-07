@@ -51,6 +51,7 @@ class HorarioAulasController extends Controller
         // se hace un array con todos los campos que se van a insertar en la bd y se le pone
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
+        'clave_aula'=>'required|string|max:100',
         'Nombre_aula'=>'required|string|max:100',
          'dia' =>'required|string|max:100',
          'hora' =>'required|string|max:100',
@@ -62,7 +63,7 @@ class HorarioAulasController extends Controller
         //$materias=request()->all();
         $aula=request()->except('_token','_method');
         HorarioAulas::insert($aula);
-        return redirect('HorarioAulas')->with('Mensaje','candidato agregado con exito');
+        return redirect('HorarioAulas')->with('Mensaje','Aula agregada con exito');
 
  
 

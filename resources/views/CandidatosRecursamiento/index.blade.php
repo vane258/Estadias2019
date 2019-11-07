@@ -21,7 +21,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <div class="col-md-12">
         <div class="card card-plain">
           <div class="card-header card-header-primary" style="background-color:#800080">
-            <h4 class="card-title mt-0" style="background-color:#ffffff"> Tabla de alumnos candidatos a Recursamiento</h4>
+            <h4 class="card-title mt-0" style="color:#ffffff"> Tabla de alumnos candidatos a Recursamiento</h4>
           <!--  este es el input que ayudara a hacer el filtrado y la busqueda en esta vista por nombre
           del alumno-->
             <div class="card-tools">
@@ -65,7 +65,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($recursamiento as $r1)
         <tr>
-        <td>{{$r1->id}}</td>
+        <td>{{$r1->Matricula}}</td>
         <td>{{$r1->Nombre_alumno}}</td>
         <td>{{$r1->plan_estudios}}</td>
         <td>{{$r1->campus}}</td>
@@ -76,6 +76,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/CandidatosRecursamiento/'.$r1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.CandidatosRecursamiento', ['id' => $r1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/CandidatosRecursamiento/'.$r1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -91,5 +93,4 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success" style="background:#800080">Inicio</a>
-<a href="{{url('cr')}}" class="btn btn-success" style="background:#800080">Informe</a>
 @endsection

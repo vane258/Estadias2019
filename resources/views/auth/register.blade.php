@@ -22,7 +22,7 @@
 <body class="hold-transition login-page" style="background-image:url('/images/login.jpeg');">
 <div class="login-box" >
 <div class="login-logo">
-<a href="home" style="color:#800080"><b>Universidad Politecnica de Victoria</b></a>
+<a href="home" style="color:#ffffff"><b>Universidad Politecnica de Victoria</b></a>
 </div>
 <div class="card" >
     <div class="card-body login-card-body" style="background-color:#800080">

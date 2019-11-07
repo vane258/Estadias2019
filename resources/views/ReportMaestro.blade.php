@@ -65,9 +65,9 @@ los registros de laa bd en-->
    </tr>
      <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($maestros AS $p)
+   @foreach($materias AS $p)
    <tr>
-   <td>{{$p->id}}</td>
+   <td>{{$p->clave_maestro}}</td>
    <td>{{$p->Nombre_maestro}}</td>
    <td>{{$p->plan_estudios}}</td>
    <td>{{$p->Nombre_Materia}}</td>

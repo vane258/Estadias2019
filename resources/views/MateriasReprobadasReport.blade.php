@@ -49,15 +49,17 @@ los registros de laa bd en-->
   <tr>
             <th>Matricula </th>
             <th>Nombre Alumno </th>
+            <th>Clave Materia</th>
             <th>Nombre Materia</th>
             <th>Plan de Estudios</th>
             </tr>
 <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($materia AS $m1)
+   @foreach($materias AS $m1)
 <tr>
-        <td>{{$m1->id}}</td>
+        <td>{{$m1->Matricula}}</td>
         <td>{{$m1->Nombre_alumno}}</td>
+        <td>{{$m1->clave_Materia}}</td>
         <td>{{$m1->Nombre_Materia}}</td>
         <td>{{$m1->plan_estudios}}</td>
     

@@ -52,6 +52,7 @@ class CandidatosRecursamientoController extends Controller
            // se hace un array con todos los campos que se van a insertar en la bd y se le pone
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
+        'Matricula'=>'required|string|max:100',
         'Nombre_alumno'=>'required|string|max:100',
          'plan_estudios' =>'required|string|max:100',
          'campus' =>'required|string|max:100',

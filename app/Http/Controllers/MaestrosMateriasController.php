@@ -47,6 +47,7 @@ class MaestrosMateriasController extends Controller
     // una condicion de require para que se obligatorio introducir valores en todos los campos del
     // formulario
        $campos=[
+         'clave_maestro' =>'required|string|max:100',
          'Nombre_maestro' =>'required|string|max:100',
          'Nombre_Materia' =>'required|string|max:100',
          'plan_estudios'=>'required|string|max:100',

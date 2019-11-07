@@ -64,7 +64,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($maestros AS $maestros1)
         <tr>
-        <td>{{$maestros1->id}}</td>
+        <td>{{$maestros1->clave_maestro}}</td>
         <td>{{$maestros1->Nombre_maestro}}</td>
         <td>{{$maestros1->plan_estudios}}</td>
         <td>{{$maestros1->Nombre_Materia}}</td>
@@ -75,6 +75,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
          eliminar del controlador-->
         <td><a class="btn btn-warning" href="{{ url('/MaestrosMaterias/'.$maestros1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.ReportMaestros', ['id' => $maestros1->clave_maestro])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/MaestrosMaterias/'.$maestros1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
