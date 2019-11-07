@@ -44,8 +44,9 @@ margin: auto;
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Materias  ofertar</h3>
 </div>
-<div >Materia:</div>
-<div >Cuatrimestre:</div>
+<br>
+<div ><b>Materia:</b>  {{$alumno->Nombre_Materia}}</div>
+
 <br>
 <br>
 
@@ -58,17 +59,19 @@ los registros de laa bd en-->
    <th>Generacion</th>
    <th>Plan de Estudios</th>
    <th>Sede</th>
+   <th>Clave  Materia </th>
    <th>Cursando Cuatrimestre</th>
    </tr>
     <!-- ciclo que recorre y ayuda a mostrar todos los registros en la 
   tabla del reporte-->
-   @foreach($ofertar AS $c)
+   @foreach($materias AS $c)
    <tr>
-   <td>{{$c->id}}</td>
+   <td>{{$c->matricula}}</td>
    <td>{{$c->Nombre_alumno}}</td>
    <td>{{$c->Generacion}}</td>
    <td>{{$c->plan_estudios}}</td>
    <td>{{$c->sede}}</td>
+   <td>{$c->clave_materia}}</td>
    <td>{{$c->cursando_cuatrimestre}}</td>
  
     </tr>

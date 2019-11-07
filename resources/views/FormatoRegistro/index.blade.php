@@ -20,7 +20,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
         
 <div class="col-md-12">
         <div class="card card-plain">
-          <div class="card-header card-header-primary" style="background-color:#572364">
+          <div class="card-header card-header-primary" style="background-color:#800080">
             <h4 class="card-title mt-0" style="color:white"> Tabla de aspirantes Formato Registro</h4>
            <!--  este es el input que ayudara a hacer el filtrado y la busqueda en esta vista por nombre
           del alumno-->
@@ -60,6 +60,17 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
             <th>Escuela de Procedencia</th>
             <th>Domicilio Escuela</th>
             <th>Area egreso</th>
+            <th>periodo</th>
+            <th>Programa Academico</th>
+            <th> Sede</th>
+            <th>Generacion</th>
+            <th>Domicilio</th>
+            <th>ife</th>
+            <th>Anio de Egreso</th>
+
+
+
+
             <th>Acciones</th>
             
         </tr>
@@ -69,11 +80,11 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
      trayendolos de la BD -->
     @foreach($reg as $b1)
         <tr>
-        <td>{{$b1->id}}</td>
+        <td>{{$b1->Matricula}}</td>
         <td>{{$b1->Nombre_alumno}}</td>
         <td>{{$b1->f_nac}}</td>
         <td>{{$b1->edad}}</td>
-        <td>{{$b1->curp}}</td>
+        <td>{{$b1->Curp}}</td>
         <td>{{$b1->sexo}}</td>
         <td>{{$b1->LugarN}}</td>
         <td>{{$b1->estadoC}}</td>
@@ -84,11 +95,24 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
         <td>{{$b1->escp}}</td>
         <td>{{$b1->domesc}}</td>
         <td>{{$b1->area}}</td>
+        <td>{{$b1->Periodo}}</td>
+        <td>{{$b1->programa}}</td>
+        <td>{{$b1->sede}}</td>
+       <td>{{$b1->generacion}}</td>
+       <td>{{$b1->dom}}</td>
+       <td>{{$b1->ife}}</td>
+       <td>{{$b1->egreso}}</td>
+      
+
+
+
         <!-- es el direccionamiento a las funciones de editar y 
          eliminar del controlador-->
 
       <td><a class="btn btn-warning" href="{{ url('/FormatoRegistro/'.$b1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.FormatoRegistro', ['id' => $b1->Matricula])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/FormatoRegistro/'.$b1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -104,5 +128,4 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('Fo')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 @endsection

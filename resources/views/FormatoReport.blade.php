@@ -52,97 +52,88 @@ margin: auto;
 <tr  style="border:white">
 <td  style="border:white"><img src="./images/logoG.png" width="60" height="40" ></td>
 <td  style="border:white"><img src="./images/logoS.png" width="50" height="30"></td>
-</tr >
-</table>
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Departamento de Servicios Escolares</h3>
 <p style="text-align:center">FICHA DE REGISTRO- NUEVO INGRESO</p>
+</tr >
+</table>
 </div>
+
 <br>
+
 <!-- es el formato del reporte divido en forms para que 
 quede con buen estilo-->
 <form style="border:1px solid #070707">
 <h3 class="center" style="text-align:left">DATOS DE INGRESO</h3>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">PROGRAMA ACADEMICO .- </label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno">Periodo de ingreso :</label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno" style="text-align:left">sede:</label> 
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
- <label style="text-align:center"> Matricula</label> 
- <input  type="text" name="Nombre_alumno" id="Nombre_alumno">
- <label style="text-align:right"> Generacion</label>
+<label for="nombre_alumno" id="nombre_alumno">Programa Academico. {{$alumno->programa}} </label>
 
+</p>
+<p>
+<label for="nombre_alumno" id="nombre_alumno">Periodo de ingreso: {{$alumno->Periodo}}</label>
+</p>
+<p>
+<label for="nombre_alumno" id="nombre_alumno" style="align:left">sede:{{$alumno->sede}}</label> 
+ <label style="align:center"> Matricula{{$alumno->Matricula}}</label> 
+ <label style="align:right"> Generacion:{{$alumno->generacion}}</label>
 </p>
 </form>
 <br>
 <form style="border:1px solid #070707">
 <h3 class="center" style="text-align:left">DATOS PERSONALES</h3>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Alumno .-</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<label for="nombre_alumno" id="nombre_alumno">Alumno:{{$alumno->Nombre_alumno}} .-</label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno" style="text-align:left">Fecha de Nacimiento:</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-  <label style="text-align:center"> Edad:</label>
-  <input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-  <br>
-   <label style="text-align:right"> Curp:</label>
-   <input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-   <label style="text-align:right"> Sexo</label>
-   <input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<label for="nombre_alumno" id="nombre_alumno" style="text-align:left">Fecha de Nacimiento:{{$alumno->f_nac}}</label>
+<br>
+  <label style="text-align:center"> Edad:{{$alumno->edad}}</label>
+ 
+   <label style="text-align:right"> Curp:{{$alumno->Curp}}</label>
 
+   <label style="text-align:right"> Sexo:{{$alumno->sexo}}</label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Lugar de Nacimiento:</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-<label for="nombre_alumno" id="nombre_alumno">Estado Civil</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<label for="nombre_alumno" id="nombre_alumno">Lugar de Nacimiento:{{$alumno->LugarN}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Estado Civil:{{$alumno->estadoC}}</label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Domicilio:</label>
+<label for="nombre_alumno" id="nombre_alumno">Domicilio:{{$alumno->dom}}</label>
 </p>
 
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Correo Electronico:</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<label for="nombre_alumno" id="nombre_alumno">Correo Electronico:{{$alumno->email}}</label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">IFE:</label>
+<label for="nombre_alumno" id="nombre_alumno">IFE:{{$alumno->ife}}</label>
 </p>
 <p>
 <h3 class="center" style="text-align:left">REFERENCIAS</h3>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<label for="nombre_alumno" id="nombre_alumno"> {{$alumno->referencias}}</label>
+
 </p>
 <p>
 <label for="nombre_alumno" id="nombre_alumno">Actualmente trabaja?( )SI ( ) NO:</label> <label for="nombre_alumno" id="nombre_alumno">Lugar y horario laboral</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
 </p>
 <p>
 <label for="nombre_alumno" id="nombre_alumno">Tiene hijos?( )SI ( ) NO:</label> 
 </P>
 <p>
 <label for="nombre_alumno" id="nombre_alumno">Presenta alguna discapacidad?( )SI ( ) NO:</label> </label> <label for="nombre_alumno" id="nombre_alumno">Describa</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
 </P>
 <p>
 <h3 class="center" style="text-align:left">DATOS DE ESCOLARIDAD</h3>
-<label for="nombre_alumno" id="nombre_alumno">Institucion de procedencia</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-<label for="nombre_alumno" id="nombre_alumno">Domicilio de la institucion</label>
+<label for="nombre_alumno" id="nombre_alumno">Institucion de procedencia :{{$alumno->escp}}</label>
+<br>
+<label for="nombre_alumno" id="nombre_alumno">Domicilio de la institucion:{{$alumno->domesc}}</label>
 
 </p>
 
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Anio de egreso</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
-<label for="nombre_alumno" id="nombre_alumno">Area de egreso</label>
-<input  type="text" name="Nombre_alumno" id="Nombre_alumno">
+<label for="nombre_alumno" id="nombre_alumno">Anio de egreso :{{$alumno->egreso}}</label>
 <br>
+<label for="nombre_alumno" id="nombre_alumno">Area de egreso:{{$alumno->area}}</label>
+
 </p>
 <p style="text-align:center">
 
@@ -159,10 +150,6 @@ quede con buen estilo-->
 </table>
 </div>
 </div>
-
-
-
-
 
    </body>
    </html>

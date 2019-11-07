@@ -52,6 +52,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
              
             <th>Matricula </th>
             <th>Nombre Alumno</th>
+            <th>Clave Materia</th>
             <th>Nombre Materia</th>
             <th>Generacion</th>
             <th>Plan de Estudios</th>
@@ -69,6 +70,7 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
        
         <td>{{$a1->matricula}}</td>
         <td>{{$a1->Nombre_alumno}}</td>
+        <td>{{$a1->clave_materia}}</td>
         <td>{{$a1->Nombre_Materia}}</td>
         <td>{{$a1->Generacion}}</td>
         <td>{{$a1->plan_estudios}}</td>
@@ -78,6 +80,8 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 
       <td><a class="btn btn-warning" href="{{ url('/AsignaturasOfertar/'.$a1->id. '/edit')}}">
         Editar</a>   |
+        <a href="{{route('reports.MateriasOfertar', ['id' => $a1->clave_materia])}}" class="btn btn-primary">Informe</a>
+
         <form method="post" action="{{url('/AsignaturasOfertar/'.$a1->id)}}" style="display:inline">
             {{csrf_field() }}
             {{method_field('DELETE')}}
@@ -90,7 +94,6 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
     </tbody>
 </table>
 <a href="{{url('home')}}" class="btn btn-success"   style="background:#800080">Inicio</a>
-<a href="{{url('mo')}}" class="btn btn-success"   style="background:#800080">Reporte</a>
 </div>
 </div>
 </div>

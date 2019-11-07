@@ -51,11 +51,11 @@ class FormatoRegistroController extends Controller
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
        $campos=[
-        'id'=>'required|string|max:100',
+        'Matricula'=>'required|string|max:100',
          'Nombre_alumno'=>'required|string|max:100',
          'f_nac'=>'required|string|max:100',
          'edad'=>'required|string|max:100',
-         'curp'=>'required|string|max:100',
+         'Curp'=>'required|string|max:100',
          'sexo'=>'required|string|max:100',
          'LugarN'=>'required|string|max:100',
          'mpio'=>'required|string|max:100',
@@ -68,6 +68,7 @@ class FormatoRegistroController extends Controller
          'area'=>'required|string|max:100',
          'prom'=>'required|string|max:100',
          'tel'=>'required|string|max:100',
+         'programa'=>'required|string|max:100'
          
        ];
        // es una variable que nos ayuda a imprimir un mensaje para saber cual fue el campo que se olvido introducir
@@ -102,9 +103,8 @@ class FormatoRegistroController extends Controller
     public function edit($id)
     {
         // es para que encuentre el registro con el id  y lo muestre al oprimir la opcion editar
-
         $reg=FormatoRegistro::findorfail($id);
-        return view('.edit',compact('reg'));
+        return view('FormatoRegistro.edit',compact('reg'));
     }
 
     /**

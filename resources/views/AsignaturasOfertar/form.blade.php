@@ -15,6 +15,10 @@
 <label class="control-label" for="Nombre_alumno">{{'Nombre Alumno'}}</label>
 <input  class="form-control" type="text" name="Nombre_alumno" id="Nombre_alumno" value="{{isset ($asignaturas->Nombre_alumno)?$asignaturas->Nombre_alumno:''}}">
 </div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="clave_materia">{{'Clave Materia'}}</label>
+<input  class="form-control" type="text" name="clave_materia" id="clave_materia" value="{{isset ($asignaturas->clave_Materia)?$asignaturas->clave_Materia:''}}">
+</div>
 
 <div class="form-group" style="color:#ffffff">
 <label class="control-label" for="Nombre_Materia">{{'Nombre Materia'}}</label>

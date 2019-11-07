@@ -16,10 +16,10 @@ de las vistas  -->
   <div class="card-body login-card-body" style="background-color:#800080">
 <!--es la variable modo la cual se declara especificamente en esta vista para ayudar a indentificar que 
  vista y que accion se esta ejecutando  -->
-<form action="{{url('/FormatoReporte/' .$reg->id)}}" method="post" enctype="multipart/form-data">
+<form action="{{url('/FormatoRegistro/' .$reg->id)}}" method="post" enctype="multipart/form-data">
 {{csrf_field()}}
 {{method_field('PATCH')}}
-@include('FormatoReporte.form',['Modo'=>'edicionfor'])
+@include('FormatoRegistro.form',['Modo'=>'edicionfor'])
 </form>
 </div>
 </div>

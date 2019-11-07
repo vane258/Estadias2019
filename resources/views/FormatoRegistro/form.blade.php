@@ -5,8 +5,8 @@
 
 <div class="container">
 <div class="form-group" style="color:#ffffff">
-<label class="control-label" for="id">{{'Matricula'}}</label>
-<input  class="form-control" type="text" name="id" id="id" value="{{isset ($reg->id)?$reg->id:''}}">
+<label class="control-label" for="Matricula">{{'Matricula'}}</label>
+<input  class="form-control" type="text" name="Matricula" id="Matricula" value="{{isset ($reg->Matricula)?$reg->Matricula:''}}">
 
 <div class="form-group"style="color:#ffffff">
 <label class="control-label" for="Nombre_alumno">{{'Nombre alumno'}}</label>
@@ -25,8 +25,8 @@
 </div>
 
 <div class="form-group" style="color:#ffffff">
-<label class="control-label" for="curp">{{'CURP'}}</label>
-<input   class="form-control" type="text" name="curp" id="curp" value="{{isset ($reg->curp)?$reg->curp:''}}">
+<label class="control-label" for="Curp">{{'CURP'}}</label>
+<input   class="form-control" type="text" name="Curp" id="Curp" value="{{isset ($reg->Curp)?$reg->Curp:''}}">
 </div>
 
 <div class="form-group" style="color:#ffffff">
@@ -88,6 +88,42 @@
 <label class="control-label" for="tel">{{'Telefono'}}</label>
 <input   class="form-control" type="text" name="tel" id="tel" value="{{isset ($reg->tel)?$reg->tel:''}}">
 </div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="Periodo">{{'Periodo'}}</label>
+<input   class="form-control" type="text" name="Periodo" id="Periodo" value="{{isset ($reg->Periodo)?$reg->Periodo:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="programa">{{'Programa Academico'}}</label>
+<input   class="form-control" type="text" name="programa" id="programa" value="{{isset ($reg->programa)?$reg->programa:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="sede">{{'Sede'}}</label>
+<input   class="form-control" type="text" name="sede" id="sede" value="{{isset ($reg->sede)?$reg->sede:''}}">
+</div>
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="generacion">{{'Generacion egreso'}}</label>
+<input   class="form-control" type="text" name="generacion" id="generacion" value="{{isset ($reg->generacion)?$reg->generacion:''}}">
+</div>
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="dom">{{'Domicilio Personal'}}</label>
+<input   class="form-control" type="text" name="dom" id="dom" value="{{isset ($reg->dom)?$reg->dom:''}}">
+</div>
+
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="ife">{{'No. de Identificacion'}}</label>
+<input   class="form-control" type="text" name="ife" id="dom" value="{{isset ($reg->ife)?$reg->ife:''}}">
+</div>
+
+<div class="form-group" style="color:#ffffff">
+<label class="control-label" for="egreso">{{'Año de Egreso'}}</label>
+<input   class="form-control" type="text" name="egreso" id="egreso" value="{{isset ($reg->egreso)?$reg->egreso:''}}">
+</div>
+
+
+
+
 
 
 

@@ -53,6 +53,7 @@ class AsignaturasOfertarController extends Controller
         // una condicion de require para que se obligatorio introducir valores en todos los campos del
         // formulario
        $campos=[
+        'clave_materia' =>'required|string|max:100',
          'Nombre_alumno' =>'required|string|max:100',
          'Nombre_Materia' =>'required|string|max:100',
          'Generacion' =>'required|string|max:100',

@@ -19,13 +19,12 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('Hi/{id}','HistorialAcademicoReportController@generar')->where('id', '[0-9]+')->name("reports.Historial");
 Route::get('Ce/{id}','CertificadoReportController@generar')->where('id', '[0-9]+')->name("reports.Certificado");
-Route::get('Fo','FormatoRegistroReportController@generar');
+Route::get('Fo/{id}','FormatoRegistroReportController@generar')->where('id', '[0-9]+')->name("reports.FormatoRegistro");
 Route::get('Lo/{id}','ListaAsistenciaReportController@generar')->where('id', '[0-9]+')->name("reports.ListaAsistencia");
 Route::get('As/{id}','AspirantesReportController@generar')->where('id', '[0-9]+')->name("reports.Aspirantes");
-Route::get('pdf','ReportController@generar');
 Route::get('Ab/{id}','AlumnosBajaPDFController@generar')->where('id', '[0-9]+')->name("reports.AlumnosBaja");
 Route::get('cr/{id}','CandidatosRecursamientoPDFController@generar')->where('id', '[0-9]+')->name("reports.CandidatosRecursamiento");
-Route::get('mo','MateriasOfertarPDFController@generar');
+Route::get('mo/{id}','MateriasOfertarPDFController@generar')->where('id', '[0-9]+')->name("reports.MateriasOfertar");
 Route::get('ka/{id}','kardexReportController@generar')->where('id', '[0-9]+')->name("reports.kardex");
 Route::get('pdf1/{id}','ReportMaestrosController@generar')->where('id', '[0-9]+')->name("reports.ReportMaestros");
 Route::get('Ba/{id}','BecasAsignadasPDFController@generar')->where('id', '[0-9]+')->name("reports.BecasAsignadas");
