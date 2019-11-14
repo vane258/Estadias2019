@@ -27,10 +27,10 @@ h3.center{
 }
 .oval {
    width: 90px;
-    height: 140px;
+    height: 141px;
      background:black;
-     border-radius: 45px;
-     border:#070707;
+     border-radius: 47px;
+     border:black;
      
             }
 
@@ -51,13 +51,14 @@ margin: auto;
 <div id="header">
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 </div>
-<p> <div class="oval"></div>  <P> Certifica que la(el)C. <b>{{$alumno->Nombre_alumno}}</b>
+
+<div class="container"><div class="oval"> </div>Certifica que la(el)C. <b>{{$alumno->Nombre_alumno}}</b>
 acredito el <b>{{$alumno->porcentaje}}%</b> de las asignaturas
 que integran el plan de estudios de la carrera de:<b>{{$alumno->carrera}}</b>
  consta del archivo escolar,en el periodo del mes de, <b>{{$alumno->periodo}}</b>
- al mes de <b>{{$alumno->mes}} </b>obteniendo los resultados que a continuacion se indican.</p></p>
-
-
+ al mes de <b>{{$alumno->mes}} </b>obteniendo los resultados que a continuacion se indican.</>
+ <br>
+<br>
 
 <!--inicia la tabla de donde se cargan los datos de la bd -->
 
@@ -92,7 +93,7 @@ que integran el plan de estudios de la carrera de:<b>{{$alumno->carrera}}</b>
 </p>
 <BR>
 <p style="text-align:center">
-<label for="nombre_alumno" id="nombre_alumno">MATRICULA</label>
+<label for="nombre_alumno" id="nombre_alumno">MATRICULA:<b>{{$alumno->Matricula}}</b></label>
 
 </p>
 

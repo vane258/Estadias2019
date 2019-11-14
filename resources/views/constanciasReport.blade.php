@@ -64,21 +64,17 @@ margin: auto;
 <!--son los div que van en la cabecera del reporte en formato pdf -->
 
 <div id="header">
-<table width="35%" height="auto">
-<tr  style="border:white">
-<td  style="border:white;text-align:right" ><img src="./images/logoG.png" width="60" height="40" ></td>
-<td  style="border:white"><img src="./images/logoS.png" width="50" height="30"></td>
-</tr >
-</table>
+<img src="./images/logoG.png" width="80" height="60" align="left">
+<img src="./images/logoS.png" width="50" height="35"  align="right">
+<br>
 <h5 class="right"> UPV/DSE/O/.</h5>
 <h5 class="right"> Asunto:Constancia de estudios</h5>
 <h5 class="right"> Fecha de Impresion: @php echo date("d-m-Y"); @endphp</h5>
-
 </div>
 <div>
 <h3 class="left"> A QUIEN CORRESPONDA</h3>
-<p> El suscrito, Jefe del departamento de Servicios Escolares de la Universidad Politecnica de Victoria, UPV con clave <b>28EPO0001D</b>.</p> 
-<div class="cuadrado"></div>
+<p> <div class="cuadrado"></div> El suscrito, Jefe del departamento de Servicios Escolares de la Universidad Politecnica de Victoria, UPV con clave <b>28EPO0001D</b>.</p> 
+
 </div>
 
 <p> Que el(la) C.<b>{{$alumno->Nombre_alumno}}</b>,es alumno regular de esta institucion, cursa actualmente el  cuatrimestre del programa academico de <b>{{$alumno->carrera}}</b>, en el periodo comprendido del ciclo escolar <b>{{$alumno->ciclo}}</b> ,

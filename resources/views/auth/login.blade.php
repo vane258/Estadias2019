@@ -24,7 +24,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="card">
-    <div class="card-body login-card-body" style="background-color:#572364">
+    <div class="card-body login-card-body" style="background-color:#800080">
       <p class="login-box-msg" style="color:#ffffff">Ingresa tu correo y contraseña para loguearte</p>
 
 

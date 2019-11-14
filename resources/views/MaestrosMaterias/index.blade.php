@@ -91,7 +91,6 @@ siempre y cuando se haya eliminado, creado o modificado un registro-->
 </div>
 <!--  es el direccionamiento al informe y para regresar a inicio -->
 <a href="{{url('home')}}" class="btn btn-success"  style="background:#800080">Inicio</a>
-<a href="{{url('pdf1')}}" class="btn btn-success"  style="background:#800080">Informe</a>
 
 @endsection
 

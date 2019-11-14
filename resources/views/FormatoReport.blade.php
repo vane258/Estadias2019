@@ -66,50 +66,47 @@ quede con buen estilo-->
 <form style="border:1px solid #070707">
 <h3 class="center" style="text-align:left">DATOS DE INGRESO</h3>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Programa Academico. {{$alumno->programa}} </label>
-
+<label for="nombre_alumno" id="nombre_alumno">Programa Academico. <b>{{$alumno->programa}} </b> </label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Periodo de ingreso: {{$alumno->Periodo}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Periodo de ingreso: <b> {{$alumno->Periodo}}</b></label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno" style="align:left">sede:{{$alumno->sede}}</label> 
- <label style="align:center"> Matricula{{$alumno->Matricula}}</label> 
- <label style="align:right"> Generacion:{{$alumno->generacion}}</label>
+<label for="nombre_alumno" id="nombre_alumno" style="align:left">sede: <b>{{$alumno->sede}}</b></label> 
+ <label style="align:center"> Matricula <b>{{$alumno->Matricula}}</b></label> 
+ <label style="align:right"> Generacion: <b>{{$alumno->generacion}}</b></label>
 </p>
 </form>
 <br>
 <form style="border:1px solid #070707">
 <h3 class="center" style="text-align:left">DATOS PERSONALES</h3>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Alumno:{{$alumno->Nombre_alumno}} .-</label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno" style="text-align:left">Fecha de Nacimiento:{{$alumno->f_nac}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Alumno: <b>{{$alumno->Nombre_alumno}}</b> .</label>
+<label for="nombre_alumno" id="nombre_alumno" style="text-align:left">Fecha de Nacimiento: <b>{{$alumno->f_nac}}</b></label>
 <br>
-  <label style="text-align:center"> Edad:{{$alumno->edad}}</label>
+<br>
+  <label style="text-align:center"> Edad: <b>{{$alumno->edad}}</b></label>
  
-   <label style="text-align:right"> Curp:{{$alumno->Curp}}</label>
+   <label style="text-align:right"> Curp: <b>{{$alumno->Curp}}</b></label>
 
-   <label style="text-align:right"> Sexo:{{$alumno->sexo}}</label>
+   <label style="text-align:right"> Sexo: <b>{{$alumno->sexo}}</b></label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Lugar de Nacimiento:{{$alumno->LugarN}}</label>
-<label for="nombre_alumno" id="nombre_alumno">Estado Civil:{{$alumno->estadoC}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Lugar de Nacimiento: <b>{{$alumno->LugarN}}</b></label>
+<label for="nombre_alumno" id="nombre_alumno">Estado Civil: <b>{{$alumno->estadoC}}</b></label>
 </p>
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Domicilio:{{$alumno->dom}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Domicilio: <b>{{$alumno->dom}}</b></label>
 </p>
 
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Correo Electronico:{{$alumno->email}}</label>
-</p>
-<p>
-<label for="nombre_alumno" id="nombre_alumno">IFE:{{$alumno->ife}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Correo Electronico: <b>{{$alumno->email}}</b></label>
+
+<label for="nombre_alumno" id="nombre_alumno">IFE: <b>{{$alumno->ife}}</b></label>
 </p>
 <p>
 <h3 class="center" style="text-align:left">REFERENCIAS</h3>
-<label for="nombre_alumno" id="nombre_alumno"> {{$alumno->referencias}}</label>
+<label for="nombre_alumno" id="nombre_alumno">  <b>{{$alumno->referencias}}</b></label>
 
 </p>
 <p>
@@ -123,16 +120,16 @@ quede con buen estilo-->
 </P>
 <p>
 <h3 class="center" style="text-align:left">DATOS DE ESCOLARIDAD</h3>
-<label for="nombre_alumno" id="nombre_alumno">Institucion de procedencia :{{$alumno->escp}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Institucion de procedencia : <b>{{$alumno->escp}}</b></label>
 <br>
-<label for="nombre_alumno" id="nombre_alumno">Domicilio de la institucion:{{$alumno->domesc}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Domicilio de la institucion: <b>{{$alumno->domesc}}</b></label>
 
 </p>
 
 <p>
-<label for="nombre_alumno" id="nombre_alumno">Anio de egreso :{{$alumno->egreso}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Anio de egreso : <b>{{$alumno->egreso}}</b></label>
 <br>
-<label for="nombre_alumno" id="nombre_alumno">Area de egreso:{{$alumno->area}}</label>
+<label for="nombre_alumno" id="nombre_alumno">Area de egreso: <b>{{$alumno->area}}</b></label>
 
 </p>
 <p style="text-align:center">

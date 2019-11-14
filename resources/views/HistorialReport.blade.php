@@ -40,12 +40,8 @@ margin: auto;
 titulo del reporte -->
 
 <div id="header">
-<table width="35%" height="auto">
-<tr  style="border:white">
-<td  style="border:white"><img src="./images/logoG.png" width="60" height="40" ></td>
-<td  style="border:white"><img src="./images/logoS.png" width="50" height="30"></td>
-</tr >
-</table>
+<img src="./images/logoG.png" width="80" height="60" align="left">
+<img src="./images/logoS.png" width="50" height="35"  align="right">
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Historial Academico</h3>
 </div>
@@ -56,14 +52,10 @@ titulo del reporte -->
 <div style="text-align:left">Carrera: {{$alumno->carrera}}</div>
 <div style="text-align:right">Plan Estudios: {{$alumno->plan_estudios}}</div>
 <div style="text-align:left">Modalidad: {{$alumno->modalidad}}</div>
-
-<p>
 <div style="text-align:right">Promedio General: {{$alumno->Prom_general}}</div>
 <div style="text-align:left">Creditos: {{$alumno->creditos}}</div>
 
-</p>
-<br>
-<br>
+
 <!-- inicio de la tabla donde se mostraran cada uno de 
 los registros de laa bd en el reporte-->
 <table cellspacing="0" cellpadding="8">
