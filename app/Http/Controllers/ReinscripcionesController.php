@@ -65,7 +65,7 @@ class ReinscripcionesController extends Controller
         //$materias=request()->all();
         $reis=request()->except('_token','_method');
         Reinscripciones::insert($reis);
-        return redirect('Reinscripciones')->with('Mensaje','Alumno agregado con exito');
+        return redirect('Reinscripciones')->with('Mensaje','Alumno Reinscrito agregado con exito');
 
  
 
@@ -122,7 +122,7 @@ class ReinscripcionesController extends Controller
         // segun le hayamos dado la instruccion.
         $reis=Reinscripciones::findorfail($id);
         Reinscripciones::destroy($id);
-        return redirect('Reinscripciones')->with('Mensaje','Alumno  Eliminado con Exito');
+        return redirect('Reinscripciones')->with('Mensaje','Alumno Reinscrito Eliminado con Exito');
         //
     }
 }

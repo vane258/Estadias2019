@@ -61,7 +61,7 @@ class MateriasReprobadasController extends Controller
         //$materias=request()->all();
         $materias=request()->except('_token','_method');
         MateriasReprobadas::insert($materias);
-        return redirect('MateriasReprobadas')->with('Mensaje','alumno agregado con exito');
+        return redirect('MateriasReprobadas')->with('Mensaje','ALumno con materias Reprobadas agregado con exito');
 
  
 
@@ -104,7 +104,7 @@ class MateriasReprobadasController extends Controller
         MateriasReprobadas::where('id','=',$id)->update($materias);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
-        return redirect('MateriasReprobadas')->with('Mensaje','Alumno modificado con exito');
+        return redirect('MateriasReprobadas')->with('Mensaje','Alumno con materias reprobadas modificado con exito');
     }
 
     /**
@@ -118,7 +118,7 @@ class MateriasReprobadasController extends Controller
         // segun le hayamos dado la instruccion.
         $materias=MateriasReprobadas::findorfail($id);
         MateriasReprobadas::destroy($id);
-        return redirect('MateriasReprobadas')->with('Mensaje','Alumno Eliminado con Exito');
+        return redirect('MateriasReprobadas')->with('Mensaje','Alumno con materias reprobadas Eliminado con Exito');
         //
     }
 }

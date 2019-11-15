@@ -137,7 +137,7 @@ class FormatoRegistroController extends Controller
      // segun le hayamos dado la instruccion.
         $reg=FormatoRegistro::findorfail($id);
         FormatoRegistro::destroy($id);
-        return redirect('FormatoRegistro')->with('Mensaje','Alumno Eliminada con Exito');
+        return redirect('FormatoRegistro')->with('Mensaje','Alumno Eliminado con Exito');
         //
     }
 }

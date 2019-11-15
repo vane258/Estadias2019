@@ -61,7 +61,7 @@ class MaestrosMateriasController extends Controller
         //$materias=request()->all();
         $maestros=request()->except('_token','_method');
         MaestrosMaterias::insert($maestros);
-        return redirect('MaestrosMaterias')->with('Mensaje','maestro agregado con exito');
+        return redirect('MaestrosMaterias')->with('Mensaje','maestro(a) agregado con exito');
 
  
 
@@ -104,7 +104,7 @@ class MaestrosMateriasController extends Controller
         MaestrosMaterias::where('id','=',$id)->update($maestros);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
-        return redirect('MaestrosMaterias')->with('Mensaje','maestro modificado con exito');
+        return redirect('MaestrosMaterias')->with('Mensaje','maestro(a)  modificado con exito');
     }
 
     /**
@@ -118,7 +118,7 @@ class MaestrosMateriasController extends Controller
      // segun le hayamos dado la instruccion.
         $maestros=MaestrosMaterias::findorfail($id);
         MaestrosMaterias::destroy($id);
-        return redirect('MaestrosMaterias')->with('Mensaje','Maestro Eliminado con Exito');
+        return redirect('MaestrosMaterias')->with('Mensaje','Maestro(a)  Eliminado con Exito');
         //
     }
 }

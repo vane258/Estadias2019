@@ -131,7 +131,7 @@ class CertificadoController extends Controller
     // segun le hayamos dado la instruccion.
         $cer=Certificado::findorfail($id);
         Certificado::destroy($id);
-        return redirect('Certificado')->with('Mensaje','Alumno Eliminada con Exito');
+        return redirect('Certificado')->with('Mensaje','Alumno Eliminado con Exito');
         //
     }
 }

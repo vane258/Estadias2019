@@ -69,7 +69,7 @@ class BecasAsignadasController extends Controller
         //$materias=request()->all();
         $beca=request()->except('_token','_method');
         BecasAsignadas::insert($beca);
-        return redirect('BecasAsignadas')->with('Mensaje','Alumno agregado con exito');
+        return redirect('BecasAsignadas')->with('Mensaje','Alumno con beca agregado con exito');
 
  
 

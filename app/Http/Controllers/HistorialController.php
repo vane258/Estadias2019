@@ -135,7 +135,7 @@ class HistorialController extends Controller
      // segun le hayamos dado la instruccion.
         $his=Historial::findorfail($id);
         Historial::destroy($id);
-        return redirect('Historial')->with('Mensaje','Alumno Eliminada con Exito');
+        return redirect('Historial')->with('Mensaje','Alumno Eliminado con Exito');
         //
     }
 }

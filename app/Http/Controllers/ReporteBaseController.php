@@ -107,7 +107,7 @@ class ReporteBaseController extends Controller
         ReporteBase::where('id','=',$id)->update($base);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
-        return redirect('ReporteBase')->with('Mensaje','Alumno con Beca modificado con exito');
+        return redirect('ReporteBase')->with('Mensaje','Alumno modificado con exito');
     }
 
     /**
@@ -120,7 +120,7 @@ class ReporteBaseController extends Controller
     {
         $base=ReporteBase::findorfail($id);
         ReporteBase::destroy($id);
-        return redirect('ReporteBase')->with('Mensaje','Alumno con Beca Eliminado con Exito');
+        return redirect('ReporteBase')->with('Mensaje','Alumno Eliminado con Exito');
         //
     }
 }

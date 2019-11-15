@@ -65,7 +65,7 @@ class ListaAsistenciaController extends Controller
         //$materias=request()->all();
         $lista=request()->except('_token','_method');
         ListaAsistencia::insert($lista);
-        return redirect('ListaAsistencia')->with('Mensaje','Maestro agregado con exito');
+        return redirect('ListaAsistencia')->with('Mensaje','Maestro(a) agregado con exito');
     }
 
     /**
@@ -119,7 +119,7 @@ class ListaAsistenciaController extends Controller
      // segun le hayamos dado la instruccion.
         $lista=ListaAsistencia::findorfail($id);
         ListaAsistencia::destroy($id);
-        return redirect('ListaAsistencia')->with('Mensaje','Maestro Eliminado con Exito');
+        return redirect('ListaAsistencia')->with('Mensaje','Maestro(a) Eliminado con Exito');
         //
     }
 }

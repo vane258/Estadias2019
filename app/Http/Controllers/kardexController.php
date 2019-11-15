@@ -127,7 +127,7 @@ class kardexController extends Controller
      // segun le hayamos dado la instruccion.
         $kar=kardex::findorfail($id);
         kardex::destroy($id);
-        return redirect('kardex')->with('Mensaje','Aula Eliminada con Exito');
+        return redirect('kardex')->with('Mensaje','Alumno eliminado con Exito');
         //
     }
 }

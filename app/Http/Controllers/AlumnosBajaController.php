@@ -127,7 +127,7 @@ class AlumnosBajaController extends Controller
         // segun le hayamos dado la instruccion.
         $baja=AlumnosBaja::findorfail($id);
         AlumnosBaja::destroy($id);
-        return redirect('AlumnosBaja')->with('Mensaje','Alumno Eliminada con Exito');
+        return redirect('AlumnosBaja')->with('Mensaje','Alumn@ Eliminad@ con Exito');
         //
     }
 }

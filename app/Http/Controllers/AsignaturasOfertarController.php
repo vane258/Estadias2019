@@ -70,7 +70,7 @@ class AsignaturasOfertarController extends Controller
         //$materias=request()->all();
         $asignaturas=request()->except('_token','_method');
         AsignaturasOfertar::insert($asignaturas);
-        return redirect('AsignaturasOfertar')->with('Mensaje','Asignatura agregado con exito');
+        return redirect('AsignaturasOfertar')->with('Mensaje','Asignatura agregadacon exito');
 
  
 
@@ -116,7 +116,7 @@ class AsignaturasOfertarController extends Controller
         AsignaturasOfertar::where('id','=',$id)->update($asignaturas);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
-        return redirect('AsignaturasOfertar')->with('Mensaje','Asignatura modificado con exito');
+        return redirect('AsignaturasOfertar')->with('Mensaje','Asignatura modificada con exito');
     }
 
     /**

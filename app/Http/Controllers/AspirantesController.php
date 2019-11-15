@@ -78,7 +78,7 @@ class AspirantesController extends Controller
         //$materias=request()->all();
         $aspirante=request()->except('_token','_method');
         Aspirantes::insert($aspirante);
-        return redirect('Aspirantes')->with('Mensaje','Alumno agregado con exito');
+        return redirect('Aspirantes')->with('Mensaje','Aspirante agregado con exito');
 
  
 
@@ -124,7 +124,7 @@ class AspirantesController extends Controller
         Aspirantes::where('id','=',$id)->update($aspirante);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
-        return redirect('Aspirantes')->with('Mensaje','Alumno con Beca modificado con exito');
+        return redirect('Aspirantes')->with('Mensaje','Aspirante modificado con exito');
     }
 
     /**
@@ -139,7 +139,7 @@ class AspirantesController extends Controller
         // segun le hayamos dado la instruccion.
         $aspirante=Aspirantes::findorfail($id);
         Aspirantes::destroy($id);
-        return redirect('Aspirantes')->with('Mensaje','Alumno con Beca Eliminado con Exito');
+        return redirect('Aspirantes')->with('Mensaje','Aspirante Eliminado con Exito');
         //
     }
 }

@@ -106,7 +106,7 @@ class HorarioMaestrosController extends Controller
         HorarioMaestros::where('id','=',$id)->update($maestro);
        // $materias=MateriasReprobadas::findorfail($id);
        // return view('MateriasReprobadas.edit',compact('materias'));
-        return redirect('HorarioMaestros')->with('Mensaje','Maestro modificada con exito');
+        return redirect('HorarioMaestros')->with('Mensaje','Maestro modificado con exito');
     }
 
     /**

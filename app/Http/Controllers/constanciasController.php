@@ -131,7 +131,7 @@ return view('constancias.edit',compact('cons'));
      // segun le hayamos dado la instruccion.
         $cons=constancias::findorfail($id);
         constancias::destroy($id);
-        return redirect('constancias')->with('Mensaje','Alumno Eliminada con Exito');
+        return redirect('constancias')->with('Mensaje','Alumno Eliminado con Exito');
         //
     }
 }
