@@ -50,10 +50,10 @@ margin: auto;
 </div>
 <br>
 <br>
-<div style="text-align:left" >Nombre Maestro: {{$alumno->Nombre_Maestro}}</div>
-<div style="text-align:right">Periodo: {{$alumno->Periodo}}</div>
-<div style="text-align:left">Grupo: {{$alumno->Grupo}}</div>
-<div style="text-align:right">Nombre Materia: {{$alumno->Nombre_Materia}}</div>
+<div style="text-align:left" >Nombre Maestro:<b> {{$alumno->Nombre_Maestro}}</b></div>
+<div style="text-align:right">Periodo:<b> {{$alumno->Periodo}}</b></div>
+<div style="text-align:left">Grupo:<b> {{$alumno->Grupo}}</b></div>
+<div style="text-align:right">Nombre Materia:<b> {{$alumno->Nombre_Materia}}</b></div>
 <br>
 <br>
 <!-- inicio de la tabla donde se mostraran cada uno de 

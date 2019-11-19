@@ -47,13 +47,13 @@ titulo del reporte -->
 </div>
 <!--  son parrafos que van conformando el formato del reporte-->
 
-<div style="text-align:left" >Alumno: {{$alumno->Nombre_alumno}}</div>
-<div style="text-align:right">Matricula: {{$alumno->Matricula}}</div>
-<div style="text-align:left">Carrera: {{$alumno->carrera}}</div>
-<div style="text-align:right">Plan Estudios: {{$alumno->plan_estudios}}</div>
-<div style="text-align:left">Modalidad: {{$alumno->modalidad}}</div>
-<div style="text-align:right">Promedio General: {{$alumno->Prom_general}}</div>
-<div style="text-align:left">Creditos: {{$alumno->creditos}}</div>
+<div style="text-align:left" >Alumno: <b>{{$alumno->Nombre_alumno}}</b></div>
+<div style="text-align:right">Matricula:  <b>{{$alumno->Matricula}}</b></div>
+<div style="text-align:left">Carrera:  <b>{{$alumno->carrera}}</b></div>
+<div style="text-align:right">Plan Estudios: <b> {{$alumno->plan_estudios}}</b></div>
+<div style="text-align:left">Modalidad: <b> {{$alumno->modalidad}}</b></div>
+<div style="text-align:right">Promedio General: <b> {{$alumno->Prom_general}}</b></div>
+<div style="text-align:left">Creditos: <b> {{$alumno->creditos}}</b></div>
 
 
 <!-- inicio de la tabla donde se mostraran cada uno de 

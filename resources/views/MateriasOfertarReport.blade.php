@@ -45,7 +45,7 @@ margin: auto;
 <h3 class="center">Materias  ofertar</h3>
 </div>
 <br>
-<div ><b>Materia:</b>  {{$alumno->Nombre_Materia}}</div>
+<div >Materia:<b> {{$alumno->Nombre_Materia}}</b></div>
 
 <br>
 <br>

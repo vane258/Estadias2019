@@ -48,19 +48,12 @@ margin: auto;
 <!--son los div que van en la cabecera del reporte en formato pdf -->
 
 <div id="header">
-<table width="35%" height="auto">
-<tr  style="border:white">
-<td  style="border:white"><img src="./images/logoG.png" width="60" height="40" ></td>
-<td  style="border:white"><img src="./images/logoS.png" width="50" height="30"></td>
+<img src="./images/logoG.png" width="80" height="60" align="left">
+<img src="./images/logoS.png" width="50" height="35"  align="right">
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Departamento de Servicios Escolares</h3>
 <p style="text-align:center">FICHA DE REGISTRO- NUEVO INGRESO</p>
-</tr >
-</table>
 </div>
-
-<br>
-
 <!-- es el formato del reporte divido en forms para que 
 quede con buen estilo-->
 <form style="border:1px solid #070707">

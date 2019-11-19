@@ -39,8 +39,8 @@ margin: auto;
 <!--son los div que van en la cabecera del reporte en formato pdf -->
 <div id="header">
 <img src="./images/logo.png" width="150" height="100" >
-<h2 class="center"  >Reinscripcion de alumnos</h2>
-<div style="text-align:center" >Periodo: {{$alumno->per}}</div>
+<h2 class="center">Reinscripcion de alumnos</h2>
+<div style="text-align:center" >Periodo:<b> {{$alumno->per}}</b></div>
 </div>
 <br>
 <br>

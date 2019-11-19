@@ -37,7 +37,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(UserRequest $request, User $model)
-    {
+   // se encripta la variable contrasena mediante el algoritmo de encriptacion MD5 
+    {   $password = md5($password);
         $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
 
         return redirect()->route('user.index')->withStatus(__('User successfully created.'));

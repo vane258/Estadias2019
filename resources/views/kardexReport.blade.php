@@ -56,14 +56,14 @@ margin: auto;
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h2 class="center">Kardex </h2>
 </div>
-<div style="text-align:left" >Alumno: {{$alumno->Nombre_alumno}}</div>
-<div style="text-align:right">Promedio General: {{$alumno->promedio_gral}}</div>
-<div style="text-align:left">Matricula: {{$alumno->Matricula_alumno}}</div>
-<div style="text-align:right">Creditos: {{$alumno->creditos}}</div>
-<div style="text-align:left">Carrera: {{$alumno->carrera}}</div>
-<div style="text-align:right">Porcentaje de Avance: {{$alumno->porcentaje_avance}} %</div>
-<div style="text-align:left">Plan Estudios: {{$alumno->plan_estudios}}</div>
-<div style="text-align:right">Fecha de Impresion: @php echo date("d-m-Y"); @endphp</div>
+<div style="text-align:left" >Alumno: <b>{{$alumno->Nombre_alumno}}</b></div>
+<div style="text-align:right">Promedio General:<b> {{$alumno->promedio_gral}}</b></div>
+<div style="text-align:left">Matricula: <b>{{$alumno->Matricula_alumno}}</b></div>
+<div style="text-align:right">Creditos: <b>{{$alumno->creditos}}</b></div>
+<div style="text-align:left">Carrera: <b>{{$alumno->carrera}}</b></div>
+<div style="text-align:right">Porcentaje de Avance:<b> {{$alumno->porcentaje_avance}} %</b></div>
+<div style="text-align:left">Plan Estudios: <b>{{$alumno->plan_estudios}}</b></div>
+<div style="text-align:right">Fecha de Impresion: <b>@php echo date("d-m-Y"); @endphp</b></div>
 
 <!-- inicio de la tabla donde se mostraran cada uno de 
 los registros de laa bd en-->
