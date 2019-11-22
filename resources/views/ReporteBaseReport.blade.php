@@ -1,4 +1,4 @@
-<!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
+<!-- este es el inicio del documento hmtl que le da estilo al reporte -->
 <!DOCTYPE html>
 <html>
 <style>
@@ -41,8 +41,8 @@ margin: auto;
 </head>
 <!--son los div que van en la cabecera del reporte en formato pdf -->
 <div id="header">
-<img src="./images/logoG.png" width="80" height="60" align="left">
-<img src="./images/logoS.png" width="50" height="35"  align="right">
+<img src="./images/logoG.png" width="80" height="70" align="left">
+<img src="./images/logoS.png" width="50" height="45"  align="right">
 <h2 class="center"  >Universidad Politecnica de Victoria</h2>
 <h3 class="center">Reporte Base de los Alumnos</h3>
 </div>
@@ -92,12 +92,10 @@ los registros de laa bd en-->
     @endforeach
    </table>
   <!--este es el pie de pagina del reporte-->
-   <div id="footer">
-   <table width="35%" height="auto">
-<tr  style="border:white">
-<td  style="border:white"><img src="./images/logo.png" width="60" height="40" ></td>
-<td  style="border:white"><img src="./images/logoU.png" width="50" height="30"></td>
-</tr >
+<div id="footer">
+  
+<img src="./images/logo.png" width="60" height="50" align="left" >
+<img src="./images/logoU.png" width="50" height="40"align="right">
 </div>
   
  

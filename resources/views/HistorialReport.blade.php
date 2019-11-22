@@ -1,4 +1,4 @@
-<!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte mediante esta tabla-->
+<!-- este es el inicio del documento hmtl que le da estilo al reporte -->
 
 <!DOCTYPE html>
 <html>
@@ -124,11 +124,8 @@ los registros de laa bd en el reporte-->
    <!-- este es el pie de pagina de cada hoja que llegue a formularse del reporte-->
 
 <div id="footer">
-<table width="35%" height="auto">
-<tr  style="border:white">
-<td  style="border:white"><img src="./images/logo.png" width="60" height="40" ></td>
-<td  style="border:white"><img src="./images/logoU.png" width="50" height="30"></td>
-</tr ></table>
+<img src="./images/logo.png" width="60" height="40" align="left" >
+<img src="./images/logoU.png" width="50" height="30"align="right">
 </div>
    </body>
    </html>

@@ -1,5 +1,5 @@
-<!-- este ciclo recorre toda la  tabla y muestra los regitros en el reporte medinate esta tabla-->
-
+<!--Se extiende el diseno del admin a cada una de las vistas esto incluyendo el dashboard 
+el cual debe estar en cada una de las vistas-->
 <!DOCTYPE html>
 <html>
 <style>
