@@ -48,7 +48,7 @@ margin: auto;
 <br>
 <br>
 <!-- inicio de la tabla donde se mostraran cada uno de 
-los registros de laa bd en-->
+los registros de la bd en-->
 <table  cellspacing="0" cellpadding="8">
   <tr>
    <th>Clave Profesor</th>
@@ -76,7 +76,7 @@ los registros de laa bd en-->
    <br>
    <br>
   <!--este es el pie de pagina del reporte-->
-   <div id="footer">
+<div id="footer">
 <img src="./images/logo.png" width="60" height="40" align="left" >
 <img src="./images/logoU.png" width="50" height="30"align="right">
 </div>
